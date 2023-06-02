@@ -49,7 +49,7 @@
       <div class="container">
         <a class="navbar-brand" href="./index.html">
           <image
-            class="img-fluid"
+            class="img-fluid logo"
             src="assets/src/images/main-logo.png"
             alt="logo"
           />
@@ -260,22 +260,18 @@
                       type="email"
                       id="emall"
                       class="form-control"
+                      placeholder="Email"
                       required
                       autocomplete="off"
                     />
-                    <label class="form-control-placeholder" for="email"
-                      >Email</label
-                    >
+
                   </div>
                   <div class="form-group">
                     <select id="book" class="form-control" required>
-                      <option value="" selected disabled></option>
+                      <option value="" selected disabled>Type of Book</option>
                       <option value="Birthday Book">Birthday Book</option>
                       <option value="Wedding Book">Wedding Book</option>
                     </select>
-                    <label class="form-control-placeholder" for="book"
-                      >Type of Book</label
-                    >
                   </div>
                   <div class="form-group">
                     <textarea
@@ -283,11 +279,10 @@
                       id="message"
                       class="form-control"
                       required
+                      placeholder="Message"
                       autocomplete="off"
                     ></textarea>
-                    <label class="form-control-placeholder" for="message"
-                      >Message</label
-                    >
+                   
                   </div>
                   <div class="send-btn">
                     <button class="contact-btn">
@@ -359,7 +354,7 @@
             <div class="col-xl-2 col-lg-2 col-md-2 col-12 col-sm-12 first-col">
               <a class="brand" href="#">
                 <image
-                  class="img-fluid"
+                  class="img-fluid footer-logo"
                   src="assets/src/images/main-logo.png"
                   alt="logo"
                 />
@@ -451,6 +446,21 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"
+      type="text/javascript"
+    ></script>
+
+    <script>
+      SmoothScroll({
+        animationTime: 800,
+        stepSize: 100,
+        accelerationDelta: 50,
+        accelerationMax: 3,
+        touchpadSupport: false,
+      });
+    </script>
 
     <script>
       $(".contact-caro").owlCarousel({
