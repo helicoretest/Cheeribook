@@ -370,16 +370,20 @@ $gradint-bg : linear-gradient(180deg, #F0ADA4 0%, rgba(205, 209, 251, 0) 113.08%
     color: $black-color;
 }
 
-input{
-    &::-webkit-input-placeholder{
+input {
+    &::-webkit-input-placeholder {
         color: #2D2D2D !important;
     }
 }
 
-textarea{
-    &::-webkit-input-placeholder{
+textarea {
+    &::-webkit-input-placeholder {
         color: #2D2D2D !important;
     }
+}
+
+.unlimited-txt {
+    color: #F4B4B7;
 }
 
 //common css end
@@ -1799,12 +1803,401 @@ textarea{
 //retouching sec end
 
 //photobook sec start
+.glimpse {
+    background-color: $white-color;
 
+    .main-content {
+        padding: 80px 0px;
+        animation: drop-in 1000ms ease 500ms backwards;
+
+        @keyframes drop-in {
+            from {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate(0px);
+            }
+        }
+
+        .img-box {
+            width: 349px;
+            height: 552px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 20px;
+            }
+        }
+
+        .second-content {
+            margin-left: 40px;
+
+            .header {
+                position: relative;
+                display: flex;
+                justify-content: end;
+                margin-bottom: 40px;
+
+                .sec-header {
+                    color: #2D2D2D;
+                    text-align: start;
+
+                }
+
+                .img-box {
+                    width: 56px;
+                    height: 56px;
+                    position: absolute;
+                    right: 155px;
+                    top: 16px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+            .main-btn {
+                padding: 5px 18px;
+            }
+
+            .boxes {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 80px;
+
+                .img-box-second {
+                    width: 254px;
+                    height: 373px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 20px;
+                    }
+                }
+
+                .img-box-third {
+                    width: 337px;
+                    height: 229px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.photobook {
+    .main-content {
+        .heading {
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 48px;
+            text-align: center;
+            text-transform: capitalize;
+            color: #1E1E1E;
+            margin-bottom: 60px;
+        }
+
+        .pre-school {
+            background-color: #C0E1FF;
+            padding: 60px 0px;
+
+            .first-content {
+                .p-header {
+                    font-weight: 500;
+                    font-size: 36px;
+                    line-height: 36px;
+                    text-align: center;
+                    text-transform: capitalize;
+                    color: #2D2D2D;
+                    margin-bottom: 30px;
+                }
+
+                .p-txt {
+                    text-align: center;
+                    font-size: 18px;
+                    line-height: 28px;
+                    margin-bottom: 40px;
+                }
+
+                .btn-first {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .main-btn {
+                        background: #829DFC;
+                        border: 3px solid #829DFC;
+                        padding: 5px 18px;
+
+                        &:hover {
+                            background-color: transparent;
+                        }
+                    }
+                }
+
+                .img-container {
+                    padding: 40px 0px 0px 0px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+
+                .img-container2 {
+                    padding: 40px 0px 0px 0px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            &.guess-book {
+                background-color: #D4C0FF;
+
+                .first-content {
+                    .btn-first {
+                        .main-btn {
+                            background: #CB82FC;
+                            border: 3px solid #CB82FC;
+
+                            &:hover {
+                                background-color: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
 
 //photobook sec end
 
 
+.w {
 
+    width: 80vmin;
+    height: 80vmin;
+}
+
+.ts {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    --barH: 10%;
+    /*active zone height = 100% - barH*/
+}
+
+
+.t {
+    --w: 20%;
+    display: block;
+    width: var(--w);
+    height: var(--barH);
+    position: absolute;
+    bottom: 0;
+    left: var(--l);
+    transform-origin: top left;
+}
+
+
+.t img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(0.8);
+}
+
+
+[type="radio"] {
+    display: none;
+}
+
+:checked+label.t {
+    left: 0;
+    bottom: var(--barH);
+    height: calc(100% - var(--barH));
+}
+
+
+:checked+label.t img {
+    object-fit: contain;
+}
+
+
+/* 
+    optional
+    */
+
+.ts {
+    /*thumbnails bar*/
+    perspective: 100px;
+    perspective-origin: center center;
+    transform-style: preserve-3d;
+    pointer-events: none;
+}
+
+
+
+
+:not(:checked)+.t {
+    /*inactive labels*/
+    transform: translate3d(0, 0, -5px);
+    pointer-events: auto;
+}
+
+
+
+:not(:checked)+.t:hover {
+    transform: translate3d(0, -7px, -5px);
+    box-shadow: 0 30px 30px -25px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+
+
+:not(:checked)+.t img {
+    transform: scale(0.9);
+    /*create gaps*/
+}
+
+:checked+.t {
+    /*active label*/
+    box-shadow: 0 0 0 transparent;
+    animation: anim 2s 1;
+}
+
+@keyframes anim {
+    from {
+        transform: rotateY(6deg)rotateX(3deg)
+    }
+}
+
+/* 
+    transitions
+    */
+.t {
+    /*active->inactive & hover->rest*/
+    transition: transform 0.5s, bottom 0.6s, left 0.6s, width 0.3s, box-shadow 1s;
+}
+
+
+
+.t:hover,
+:checked+.t {
+    transition: transform 0.5s, bottom 0.6s, left 0.6s, width 0.3s, box-shadow 0s;
+}
+
+
+.w-2 {
+    width: 80vmin;
+    height: 80vmin;
+}
+
+.ts-2 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    --barH: 10%;
+    /*active zone height = 100% - barH*/
+}
+
+.t-2 {
+    --w: 20%;
+    display: block;
+    width: var(--w);
+    height: var(--barH);
+    position: absolute;
+    bottom: 0;
+    left: var(--l);
+    transform-origin: top left;
+}
+
+.t-2 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(0.8);
+}
+
+[type="radio"] {
+    display: none;
+}
+
+:checked+.t-2 {
+    left: 0;
+    bottom: var(--barH);
+    height: calc(100% - var(--barH));
+}
+
+:checked+.t-2 img {
+    object-fit: contain;
+}
+
+.ts-2 {
+    /*thumbnails bar*/
+    perspective: 100px;
+    perspective-origin: center center;
+    transform-style: preserve-3d;
+    pointer-events: none;
+}
+
+:not(:checked)+.t-2 {
+    /*inactive labels*/
+    transform: translate3d(0, 0, -5px);
+    pointer-events: auto;
+}
+
+:not(:checked)+.t-2:hover {
+    transform: translate3d(0, -7px, -5px);
+    box-shadow: 0 30px 30px -25px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+:not(:checked)+.t-2 img {
+    transform: scale(0.9);
+    /*create gaps*/
+}
+
+:checked+.t-2 {
+    /*active label*/
+    box-shadow: 0 0 0 transparent;
+    animation: anim 2s 1;
+}
+
+@keyframes anim {
+    from {
+        transform: rotateY(6deg)rotateX(3deg)
+    }
+}
+
+/* 
+      transitions
+      */
+.t-2 {
+    /*active->inactive & hover->rest*/
+    transition: transform 0.5s, bottom 0.6s, left 0.6s, width 0.3s, box-shadow 1s;
+}
+
+.t-2:hover,
+:checked+.t-2 {
+    transition: transform 0.5s, bottom 0.6s, left 0.6s, width 0.3s, box-shadow 0s;
+}
 
 
 .contact-btn {
@@ -1859,3 +2252,152 @@ textarea{
         transform: translateY(-0.1em);
     }
 }
+
+//our-gallary start
+.gallary {
+    background-color: $white-color;
+
+    .main-content {
+        ::-webkit-scrollbar {
+            width: 1px;
+            height: 1px;
+        }
+
+        ::-webkit-scrollbar-button {
+            width: 1px;
+            height: 1px;
+        }
+
+        .external {
+            overflow: hidden;
+            height: 100vh;
+
+            .horizontal-scroll-wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100vh;
+                transform: rotate(-90deg) translate3d(0, -100vh, 0);
+                transform-origin: right top;
+                overflow-y: auto;
+                overflow-x: hidden;
+                padding: 0;
+                height: 100vw;
+                perspective: 1px;
+                transform-style: preserve-3d;
+                padding-bottom: 10rem;
+
+                .img-wrapper {
+                    transform: rotate(90deg);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    min-height: 40vh;
+                    transform-origin: 50% 50%;
+                    transform: rotate(90deg) translateZ(.1px) scale(0.9) translateX(0px) translateY(-3vh);
+                    transition: 1s;
+
+                    &:hover {
+                        min-height: 65vh;
+                    }
+
+                    &.slower {
+                        transform: rotate(90deg) translateZ(-.2px) scale(1.1) translateX(-40%) translateY(-10vh);
+                    }
+
+                    &.slower1 {
+                        transform: rotate(90deg) translateZ(-.25px) scale(1.05) translateX(0%) translateY(8vh);
+                    }
+
+                    & .slower2 {
+                        transform: rotate(90deg) translateZ(-.3px) scale(1.3) translateX(0%) translateY(2vh);
+                    }
+
+                    &.slower-down {
+                        transform: rotate(90deg) translateZ(-.2px) scale(1.1) translateX(0%) translateY(16vh);
+                    }
+
+                    &.faster {
+                        transform: rotate(90deg) translateZ(.15px) scale(0.8) translateX(-133%) translateY(25vh);
+                    }
+
+                    &.faster1 {
+                        transform: rotate(90deg) translateZ(.05px) scale(0.8) translateX(0%) translateY(10vh);
+                    }
+                }
+
+            }
+        }
+
+
+        .fastest {
+            transform: rotate(90deg) translateZ(.22px) scale(0.7) translateX(-10vh) translateY(-15vh);
+        }
+
+        .vertical {
+            transform: rotate(90deg) translateZ(-.15px) scale(1.15) translateX(0%) translateY(0%);
+        }
+
+        .last {
+            transform: rotate(90deg) translateZ(-.2px) scale(1.1) translateX(25vh) translateY(-8vh);
+        }
+
+
+        .gallary-1 {
+            width: 219px !important;
+            height: 165px !important;
+        }
+
+        .gallary-2 {
+            width: 150px;
+            height: 124px;
+        }
+
+        .gallary-3 {
+            width: 254px;
+            height: 344px;
+        }
+
+        .gallary-4 {
+            width: 192px;
+            height: 182px;
+        }
+
+        .gallary-5 {
+            width: 192px;
+            height: 182px;
+        }
+
+        .gallary-6 {
+            width: 192px;
+            height: 258px;
+        }
+
+        .gallary-7 {
+            width: 143px;
+            height: 130px;
+        }
+
+        .gallary-8 {
+            width: 305px;
+            height: 189px;
+        }
+
+        img {
+            max-width: 45vh;
+            max-height: 50vh;
+            transition: .5s;
+            vertical-align: top;
+            border-radius: 10px;
+            filter: saturate(40%) sepia(30%) hue-rotate(5deg);
+
+        }
+
+        a:hover img {
+            filter: none;
+        }
+
+    }
+}
+
+//our-gallary end
