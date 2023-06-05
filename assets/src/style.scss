@@ -370,6 +370,15 @@ $gradint-bg : linear-gradient(180deg, #F0ADA4 0%, rgba(205, 209, 251, 0) 113.08%
     color: $black-color;
 }
 
+.header-h {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 48px;
+    text-transform: capitalize;
+    color: $black-color;
+}
+
 input {
     &::-webkit-input-placeholder {
         color: #2D2D2D !important;
@@ -1252,6 +1261,12 @@ textarea {
 .get-in-touch {
     background-color: $white-color;
 
+    &.photobook {
+        .main-content {
+            padding: 0px 0px 50px 0px;
+        }
+    }
+
     .main-content {
         padding: 120px 0px 50px 0px;
 
@@ -1583,7 +1598,7 @@ textarea {
                 .cheerri {
                     position: absolute;
                     bottom: 75px;
-                    right: 100px;
+                    right: 85px;
                     width: 86px;
                     height: 86px;
                 }
@@ -1897,22 +1912,25 @@ textarea {
     }
 }
 
-.photobook {
+.photobook-type {
+    position: relative;
+    
+    .heading {
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 48px;
+        text-align: center;
+        text-transform: capitalize;
+        color: #1E1E1E;
+        margin-bottom: 60px;
+    }
+
     .main-content {
-        .heading {
-            font-weight: 600;
-            font-size: 48px;
-            line-height: 48px;
-            text-align: center;
-            text-transform: capitalize;
-            color: #1E1E1E;
-            margin-bottom: 60px;
-        }
 
         .pre-school {
             background-color: #C0E1FF;
             padding: 60px 0px;
-
+            
             .first-content {
                 .p-header {
                     font-weight: 500;
@@ -1963,8 +1981,25 @@ textarea {
                 }
             }
 
+            &.life-style {
+                                background-color: #FFF5C0;
+
+                .first-content {
+                    .btn-first {
+                        .main-btn {
+                            background: #D0B93F;
+                            border: 3px solid #D0B93F;
+
+                            &:hover {
+                                background-color: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+
             &.guess-book {
-                background-color: #D4C0FF;
+                                background-color: #D4C0FF;
 
                 .first-content {
                     .btn-first {
@@ -1980,6 +2015,39 @@ textarea {
                 }
             }
 
+            &.business-portfolio {
+                                background-color: #C6FFC0;
+
+                .first-content {
+                    .btn-first {
+                        .main-btn {
+                            background: #64C857;
+                            border: 3px solid #64C857;
+
+                            &:hover {
+                                background-color: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.new-born {
+                                background-color: #FFD8D8;
+
+                .first-content {
+                    .btn-first {
+                        .main-btn {
+                            background: #FC8F82;
+                            border: 3px solid #FC8F82;
+
+                            &:hover {
+                                background-color: transparent;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -2051,24 +2119,17 @@ textarea {
     pointer-events: none;
 }
 
-
-
-
 :not(:checked)+.t {
     /*inactive labels*/
     transform: translate3d(0, 0, -5px);
     pointer-events: auto;
 }
 
-
-
 :not(:checked)+.t:hover {
     transform: translate3d(0, -7px, -5px);
     box-shadow: 0 30px 30px -25px rgba(0, 0, 0, 0.3);
     cursor: pointer;
 }
-
-
 
 :not(:checked)+.t img {
     transform: scale(0.9);
@@ -2094,8 +2155,6 @@ textarea {
     /*active->inactive & hover->rest*/
     transition: transform 0.5s, bottom 0.6s, left 0.6s, width 0.3s, box-shadow 1s;
 }
-
-
 
 .t:hover,
 :checked+.t {
@@ -2199,11 +2258,271 @@ textarea {
     transition: transform 0.5s, bottom 0.6s, left 0.6s, width 0.3s, box-shadow 0s;
 }
 
+.w-3 {
+    width: 80vmin;
+    height: 80vmin;
+}
+
+.ts-3 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    --barH: 10%;
+}
+
+.t-3 {
+    --w: 20%;
+    display: block;
+    width: var(--w);
+    height: var(--barH);
+    position: absolute;
+    bottom: 0;
+    left: var(--l);
+    transform-origin: top left;
+}
+
+.t-3 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(0.8);
+}
+
+[type="radio"] {
+    display: none;
+}
+
+:checked+.t-3 {
+    left: 0;
+    bottom: var(--barH);
+    height: calc(100% - var(--barH));
+}
+
+:checked+.t-3 img {
+    object-fit: contain;
+}
+
+.ts-3 {
+    perspective: 100px;
+    perspective-origin: center center;
+    transform-style: preserve-3d;
+    pointer-events: none;
+}
+
+:not(:checked)+.t-3 {
+    transform: translate3d(0, 0, -5px);
+    pointer-events: auto;
+}
+
+:not(:checked)+.t-3:hover {
+    transform: translate3d(0, -7px, -5px);
+    box-shadow: 0 30px 30px -25px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+:not(:checked)+.t-3 img {
+    transform: scale(0.9);
+}
+
+:checked+.t-3 {
+    box-shadow: 0 0 0 transparent;
+    animation: anim 2s 1;
+}
+
+@keyframes anim {
+    from {
+        transform: rotateY(6deg)rotateX(3deg)
+    }
+}
+
+.t-3 {
+    transition: transform 0.5s, bottom 0.6s, left 0.6s, width 0.3s, box-shadow 1s;
+}
+
+.t-3:hover,
+:checked+.t-3 {
+    transition: transform 0.5s, bottom 0.6s, left 0.6s, width 0.3s, box-shadow 0s;
+}
+
+.w-4 {
+    width: 80vmin;
+    height: 80vmin;
+}
+
+.ts-4 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    --barH: 10%;
+}
+
+.t-4 {
+    --w: 20%;
+    display: block;
+    width: var(--w);
+    height: var(--barH);
+    position: absolute;
+    bottom: 0;
+    left: var(--l);
+    transform-origin: top left;
+}
+
+.t-4 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(0.8);
+}
+
+[type="radio"] {
+    display: none;
+}
+
+:checked+.t-4 {
+    left: 0;
+    bottom: var(--barH);
+    height: calc(100% - var(--barH));
+}
+
+:checked+.t-4 img {
+    object-fit: contain;
+}
+
+.ts-4 {
+    perspective: 100px;
+    perspective-origin: center center;
+    transform-style: preserve-3d;
+    pointer-events: none;
+}
+
+:not(:checked)+.t-4 {
+    transform: translate3d(0, 0, -5px);
+    pointer-events: auto;
+}
+
+:not(:checked)+.t-4:hover {
+    transform: translate3d(0, -7px, -5px);
+    box-shadow: 0 30px 30px -25px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+:not(:checked)+.t-4 img {
+    transform: scale(0.9);
+}
+
+:checked+.t-4 {
+    box-shadow: 0 0 0 transparent;
+    animation: anim 2s 1;
+}
+
+@keyframes anim {
+    from {
+        transform: rotateY(6deg)rotateX(3deg)
+    }
+}
+
+.t-4 {
+    transition: transform 0.5s, bottom 0.6s, left 0.6s, width 0.3s, box-shadow 1s;
+}
+
+.t-4:hover,
+:checked+.t-4 {
+    transition: transform 0.5s, bottom 0.6s, left 0.6s, width 0.3s, box-shadow 0s;
+}
+
+.w-5 {
+    width: 80vmin;
+    height: 80vmin;
+}
+
+.ts-5 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    --barH: 10%;
+}
+
+.t-5 {
+    --w: 20%;
+    display: block;
+    width: var(--w);
+    height: var(--barH);
+    position: absolute;
+    bottom: 0;
+    left: var(--l);
+    transform-origin: top left;
+}
+
+.t-5 img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(0.8);
+}
+
+[type="radio"] {
+    display: none;
+}
+
+:checked+.t-5 {
+    left: 0;
+    bottom: var(--barH);
+    height: calc(100% - var(--barH));
+}
+
+:checked+.t-5 img {
+    object-fit: contain;
+}
+
+.ts-5 {
+    perspective: 100px;
+    perspective-origin: center center;
+    transform-style: preserve-3d;
+    pointer-events: none;
+}
+
+:not(:checked)+.t-5 {
+    transform: translate3d(0, 0, -5px);
+    pointer-events: auto;
+}
+
+:not(:checked)+.t-5:hover {
+    transform: translate3d(0, -7px, -5px);
+    box-shadow: 0 30px 30px -25px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+:not(:checked)+.t-5 img {
+    transform: scale(0.9);
+}
+
+:checked+.t-5 {
+    box-shadow: 0 0 0 transparent;
+    animation: anim 2s 1;
+}
+
+@keyframes anim {
+    from {
+        transform: rotateY(6deg)rotateX(3deg)
+    }
+}
+
+.t-5 {
+    transition: transform 0.5s, bottom 0.6s, left 0.6s, width 0.3s, box-shadow 1s;
+}
+
+.t-5:hover,
+:checked+.t-5 {
+    transition: transform 0.5s, bottom 0.6s, left 0.6s, width 0.3s, box-shadow 0s;
+}
 
 .contact-btn {
     font-family: inherit;
     font-size: 18px;
-    background: $main-btn-bg;
+    background: $black-color;
     color: white;
     padding: 0.5em 1em;
     // padding-left: 0.9em;
@@ -2258,6 +2577,10 @@ textarea {
     background-color: $white-color;
 
     .main-content {
+        .header-h {
+            text-align: center;
+        }
+
         ::-webkit-scrollbar {
             width: 1px;
             height: 1px;
@@ -2301,8 +2624,25 @@ textarea {
                         min-height: 65vh;
                     }
 
+                    &.fifth {
+                        transform: rotate(90deg) translateZ(.1px) scale(0.9) translateX(-670px) translateY(0px);
+
+                    }
+
                     &.slower {
-                        transform: rotate(90deg) translateZ(-.2px) scale(1.1) translateX(-40%) translateY(-10vh);
+                        transform: rotate(90deg) translateZ(-.2px) scale(1.1) translateX(-100px) translateY(-230px);
+
+                        &.third {
+                            transform: rotate(90deg) translateZ(-.2px) scale(1.1) translateX(-330px) translateY(-115px);
+                        }
+
+                        &.seventh {
+                            transform: rotate(90deg) translateZ(-.2px) scale(1.1) translateX(-650px) translateY(-250px);
+                        }
+
+                        &.eight {
+                            transform: rotate(90deg) translateZ(-.2px) scale(1.1) translateX(-750px) translateY(-45px);
+                        }
                     }
 
                     &.slower1 {
@@ -2315,14 +2655,18 @@ textarea {
 
                     &.slower-down {
                         transform: rotate(90deg) translateZ(-.2px) scale(1.1) translateX(0%) translateY(16vh);
+
+                        &.fourth {
+                            transform: rotate(90deg) translateZ(-.2px) scale(1.1) translateX(-328px) translateY(-223px);
+                        }
                     }
 
                     &.faster {
-                        transform: rotate(90deg) translateZ(.15px) scale(0.8) translateX(-133%) translateY(25vh);
+                        transform: rotate(90deg) translateZ(.15px) scale(0.8) translateX(-213px) translateY(-7px);
                     }
 
                     &.faster1 {
-                        transform: rotate(90deg) translateZ(.05px) scale(0.8) translateX(0%) translateY(10vh);
+                        transform: rotate(90deg) translateZ(.05px) scale(0.8) translateX(-860px) translateY(-100px);
                     }
                 }
 
@@ -2344,8 +2688,8 @@ textarea {
 
 
         .gallary-1 {
-            width: 219px !important;
-            height: 165px !important;
+            width: 219px;
+            height: 165px;
         }
 
         .gallary-2 {
@@ -2384,20 +2728,245 @@ textarea {
         }
 
         img {
-            max-width: 45vh;
-            max-height: 50vh;
+            // max-width: 45vh;
+            // max-height: 50vh;
             transition: .5s;
             vertical-align: top;
             border-radius: 10px;
             filter: saturate(40%) sepia(30%) hue-rotate(5deg);
 
-        }
+            &:hover {
+                filter: none;
+            }
 
-        a:hover img {
-            filter: none;
         }
 
     }
 }
 
 //our-gallary end
+
+//hot-selling start
+.hot-selling {
+    background-color: $white-color;
+
+    .main-content {
+        padding: 120px 0px;
+
+        .header-h {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .owl-carousel {
+            .owl-nav {
+                display: block;
+
+                .owl-next {
+                    position: absolute;
+                    right: -20px;
+                    bottom: 58%;
+
+                    &:hover {
+                        background-color: transparent;
+                    }
+
+                    &:focus-visible {
+                        outline: 0px;
+                    }
+                }
+
+                .owl-prev {
+                    position: absolute;
+                    left: -20px;
+                    bottom: 58%;
+
+                    &:hover {
+                        background-color: transparent;
+                    }
+
+                    &:focus-visible {
+                        outline: 0px;
+                    }
+                }
+            }
+
+            &.selling-caro {
+                .content {
+                    .box {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-bottom: 30px;
+
+                        .img-box {
+                            width: 234px;
+                            height: 325px;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+
+                    .inner-content {
+                        margin-left: 24px;
+
+                        .p-txt {
+                            color: #140301;
+                            line-height: 18px;
+                            font-weight: 500;
+                        }
+
+                        .num-txt {
+                            font-weight: 500;
+                            font-size: 20px;
+                            line-height: 20px;
+                            text-transform: capitalize;
+                            color: #2D2D2D;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//hot-selling end
+
+
+//    /** swiper **/
+//    .swiper-pagination-horizontal.swiper-pagination-bullets
+//    .swiper-pagination-bullet {
+//    position: relative;
+//    width: 33.333333333333336%;
+//    -webkit-box-flex: 0;
+//    -webkit-flex: 0 0 auto;
+//    -ms-flex: 0 0 auto;
+//    flex: 0 0 auto;
+//    border-radius: 4px;
+//    background-color: #fff;
+//    max-height: 2px;
+//    margin: 0px;
+//    -webkit-transition: all 100ms ease;
+//    transition: all 100ms ease;
+//    opacity: 0;
+//  }
+//  .swiper-pagination-horizontal.swiper-pagination-bullets
+//    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+//    opacity: 1;
+//  }
+
+//  .swiper-pagination-bullets.swiper-pagination-horizontal {
+//    left: -140px;
+//    width: 287px;
+//  }
+
+//  @-webkit-keyframes runline {
+//    from {
+//      background-position: 0% 50%;
+//    }
+//    to {
+//      background-position: 8000% 0%;
+//    }
+//  }
+
+//  .w-richtext > :first-child {
+//     margin-top: 0;
+//   }
+//   /* Snippet gets rid of bottom margin on last element in any rich text*/
+//   .w-richtext > :last-child,
+//   .w-richtext ol li:last-child,
+//   .w-richtext ul li:last-child {
+//     margin-bottom: 0;
+//   }
+//   /* Snippet prevents all click and hover interaction with an element */
+//   .clickable-off {
+//     pointer-events: none;
+//   }
+//   /* Snippet enables all click and hover interaction with an element */
+//   .clickable-on {
+//     pointer-events: auto;
+//   }
+//   /* Snippet enables you to add class of div-square which creates and maintains a 1:1 dimension of a div.*/
+//   .div-square::after {
+//     content: "";
+//     display: block;
+//     padding-bottom: 100%;
+//   }
+//   /*Hide focus outline for main content element*/
+//   main:focus-visible {
+//     outline: -webkit-focus-ring-color auto 0px;
+//   }
+//   /* Make sure containers never lose their center alignment*/
+//   .container-medium,
+//   .container-small,
+//   .container-large {
+//     margin-right: auto !important;
+//     margin-left: auto !important;
+//   }
+//   /*Reset buttons, and links styles*/
+//   a {
+//     color: inherit;
+//     text-decoration: inherit;
+//     font-size: inherit;
+//   }
+//   /*Apply "..." after 3 lines of text */
+//   .text-style-3lines {
+//     display: -webkit-box;
+//     overflow: hidden;
+//     -webkit-line-clamp: 3;
+//     -webkit-box-orient: vertical;
+//   }
+//   /*Apply "..." after 2 lines of text */
+//   .text-style-2lines {
+//     display: -webkit-box;
+//     overflow: hidden;
+//     -webkit-line-clamp: 2;
+//     -webkit-box-orient: vertical;
+//   }
+
+//   .w-webflow-badge {
+//     display: none !important;
+//   }
+//   * {
+//     -webkit-font-smoothing: antialiased;
+//     -moz-osx-font-smoothing: grayscale;
+//     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+//   }
+
+//   ::-webkit-scrollbar {
+//     width: 10px;
+//   }
+//   ::-webkit-scrollbar-thumb {
+//     background: #ff8049;
+//   }
+//   ::-webkit-scrollbar-track {
+//     background: #fff;
+//   }
+
+//   input::-webkit-input-placeholder {
+//     transition: 0.2s;
+//   }
+//   input:-moz-placeholder {
+//     transition: 0.2s;
+//   }
+//   input::-moz-placeholder {
+//     transition: 0.2s;
+//   }
+//   input:-ms-input-placeholder {
+//     transition: 0.2s;
+//   }
+//   input:focus:-ms-input-placeholder {
+//     opacity: 0;
+//   }
+//   input:focus::-moz-placeholder {
+//     opacity: 0;
+//   }
+//   input:focus:-moz-placeholder {
+//     opacity: 0;
+//   }
+//   input:focus::-webkit-input-placeholder {
+//     opacity: 0;
+//   }
