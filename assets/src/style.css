@@ -1543,13 +1543,11 @@ textarea::-webkit-input-placeholder {
   background-color: transparent;
 }
 .photobook-type .main-content .pre-school .first-content .img-container {
-  padding: 40px 0px 0px 0px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .photobook-type .main-content .pre-school .first-content .img-container2 {
-  padding: 40px 0px 0px 0px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1597,19 +1595,19 @@ textarea::-webkit-input-placeholder {
 
 .w {
   width: 80vmin;
-  height: 80vmin;
+  height: 60vmin;
 }
 
 .ts {
   width: 100%;
   height: 100%;
   position: relative;
-  --barH: 10%;
+  --barH: 17%;
   /*active zone height = 100% - barH*/
 }
 
 .t {
-  --w: 20%;
+  --w: 10%;
   display: block;
   width: var(--w);
   height: var(--barH);
@@ -1697,14 +1695,14 @@ textarea::-webkit-input-placeholder {
 
 .w-2 {
   width: 80vmin;
-  height: 80vmin;
+  height: 60vmin;
 }
 
 .ts-2 {
   width: 100%;
   height: 100%;
   position: relative;
-  --barH: 10%;
+  --barH: 17%;
   /*active zone height = 100% - barH*/
 }
 
@@ -1794,14 +1792,14 @@ textarea::-webkit-input-placeholder {
 
 .w-3 {
   width: 80vmin;
-  height: 80vmin;
+  height: 60vmin;
 }
 
 .ts-3 {
   width: 100%;
   height: 100%;
   position: relative;
-  --barH: 10%;
+  --barH: 17%;
 }
 
 .t-3 {
@@ -1882,14 +1880,14 @@ textarea::-webkit-input-placeholder {
 
 .w-4 {
   width: 80vmin;
-  height: 80vmin;
+  height: 60vmin;
 }
 
 .ts-4 {
   width: 100%;
   height: 100%;
   position: relative;
-  --barH: 10%;
+  --barH: 17%;
 }
 
 .t-4 {
@@ -1970,14 +1968,14 @@ textarea::-webkit-input-placeholder {
 
 .w-5 {
   width: 80vmin;
-  height: 80vmin;
+  height: 60vmin;
 }
 
 .ts-5 {
   width: 100%;
   height: 100%;
   position: relative;
-  --barH: 10%;
+  --barH: 17%;
 }
 
 .t-5 {
