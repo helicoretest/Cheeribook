@@ -1454,8 +1454,6 @@ textarea::-webkit-input-placeholder {
 }
 .glimpse .main-content .second-content .header {
   position: relative;
-  display: flex;
-  justify-content: end;
   margin-bottom: 40px;
 }
 .glimpse .main-content .second-content .header .sec-header {
