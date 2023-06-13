@@ -519,10 +519,10 @@ textarea {
                 &:hover {
                     .nav-item {
                         .nav-link {
-                            color: #CCC;
+                            color: #8f8f8f;
 
                             &:hover {
-                                color: #000;
+                                color: $main-btn-bg;
                                 box-shadow: 0 2px 0 0 currentcolor;
                                 position: relative;
                                 top: -0.25rem;
@@ -559,11 +559,11 @@ textarea {
             text-decoration: none;
 
             .m-link {
-                color: #CCC;
+                color: #8f8f8f;
                 text-decoration: none;
 
                 &:hover {
-                    color: #000;
+                    color: $main-btn-bg;
                     box-shadow: 0 2px 0 0 currentcolor;
                     position: relative;
                     top: -0.25rem;
@@ -795,7 +795,7 @@ textarea {
 
             .img-sec-4 {
                 position: absolute;
-                bottom: 30px;
+                bottom: 15px;
                 right: 0px;
                 width: 310px;
                 height: 213px;
@@ -827,7 +827,7 @@ textarea {
                 animation: drop-in 1200ms ease 500ms backwards;
 
                 .sec-header {
-                    width: 490px;
+                    width: 530px;
                     text-align: center;
                     margin-bottom: 15px;
 
