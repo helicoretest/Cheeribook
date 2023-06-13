@@ -884,26 +884,28 @@ textarea::-webkit-input-placeholder {
   font-weight: 500;
 }
 
-.photobook {
+.design-photobook {
   background-color: #FFFFFF;
 }
-.photobook .main-content-img .img-box {
+.design-photobook .main-content-img {
+  padding-top: 80px;
+}
+.design-photobook .main-content-img .img-box {
   background: linear-gradient(92.51deg, #FFEEF7 0%, #FFD9B9 45.83%, #FFEAAC 69.79%, #B5FFDE 100%);
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
   height: 228px;
   width: 100%;
-  transform: translateY(110px);
   background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.photobook .main-content-img .img-box .content {
+.design-photobook .main-content-img .img-box .content {
   text-align: center;
 }
-.photobook .main-content-img .img-box .content .main-header {
+.design-photobook .main-content-img .img-box .content .main-header {
   font-size: 36px;
   line-height: 36px;
   margin-bottom: 47px;
@@ -1055,7 +1057,7 @@ textarea::-webkit-input-placeholder {
 }
 
 .client-story {
-  background: linear-gradient(180deg, #FFDFDF 0%, rgba(205, 209, 251, 0) 113.08%);
+  background: linear-gradient(180deg, #FFFCDA 0%, rgba(205, 209, 251, 0) 151.18%);
 }
 .client-story .main-content {
   padding: 120px 0px;
@@ -1104,6 +1106,9 @@ textarea::-webkit-input-placeholder {
 }
 .get-in-touch.photobook .main-content {
   padding: 0px 0px 50px 0px;
+}
+.get-in-touch.about .main-content {
+  padding: 80px 0px 50px 0px;
 }
 .get-in-touch .main-content {
   padding: 120px 0px 50px 0px;
@@ -1370,7 +1375,7 @@ textarea::-webkit-input-placeholder {
 }
 .moments .main-content .content .p-txt {
   margin-top: 20px;
-  width: 255px;
+  width: 222px;
   font-size: 16px;
   line-height: 28px;
   text-align: center;

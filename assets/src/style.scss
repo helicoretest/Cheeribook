@@ -20,7 +20,7 @@ $white-color : #FFFFFF;
 $black-color : #1E1E1E;
 $main-txt-color: #130C0B;
 $sec-txt-color : #515151;
-$gradint-bg : linear-gradient(180deg, #FFDFDF 0%, rgba(205, 209, 251, 0) 113.08%);
+$gradint-bg : linear-gradient(180deg, #FFFCDA 0%, rgba(205, 209, 251, 0) 151.18%);
 
 //common css start
 .main-btn {
@@ -1077,6 +1077,7 @@ textarea {
 .do-it {
     transform: translateY(60px);
     margin-top: 40px;
+
     .main-content {
         .box {
             background-color: $white-color;
@@ -1091,7 +1092,7 @@ textarea {
                 margin-bottom: 40px;
             }
 
-            .create-btn{
+            .create-btn {
                 display: flex;
                 justify-content: center;
                 margin-top: 40px;
@@ -1124,6 +1125,7 @@ textarea {
                         .content {
                             .img-box {
                                 margin-bottom: 20px;
+
                                 img {
                                     filter: drop-shadow(0px 13px 17px rgba(0, 0, 0, 0.16));
                                     border-radius: 10px;
@@ -1146,17 +1148,18 @@ textarea {
 //do-it sec end
 
 //photobook sec start
-.photobook {
+.design-photobook {
     background-color: $white-color;
 
     .main-content-img {
+        padding-top: 80px;
+
         .img-box {
             background: linear-gradient(92.51deg, #FFEEF7 0%, #FFD9B9 45.83%, #FFEAAC 69.79%, #B5FFDE 100%);
             box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
             border-radius: 30px;
             height: 228px;
             width: 100%;
-            transform: translateY(110px);
             background-size: cover;
             display: flex;
             flex-direction: column;
@@ -1457,6 +1460,12 @@ textarea {
     &.photobook {
         .main-content {
             padding: 0px 0px 50px 0px;
+        }
+    }
+
+    &.about {
+        .main-content {
+            padding: 80px 0px 50px 0px;
         }
     }
 
@@ -1802,7 +1811,7 @@ textarea {
 
             .p-txt {
                 margin-top: 20px;
-                width: 255px;
+                width: 222px;
                 font-size: 16px;
                 line-height: 28px;
                 text-align: center;
