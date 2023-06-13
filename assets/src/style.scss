@@ -452,41 +452,6 @@ textarea {
     color: #F4B4B7;
 }
 
-//swiper
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-    position: relative;
-    width: 33.333333333333336%;
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 auto;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-    border-radius: 4px;
-    background-color: #49657D;
-    max-height: 2px;
-    margin: 0px;
-    -webkit-transition: all 100ms ease;
-    transition: all 100ms ease;
-    opacity: 0;
-}
-
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
-    opacity: 1;
-}
-
-.swiper-pagination-bullets.swiper-pagination-horizontal {
-    left: -140px;
-    width: 287px;
-}
-
-@-webkit-keyframes runline {
-    from {
-        background-position: 0% 50%;
-    }
-
-    to {
-        background-position: 8000% 0%;
-    }
-}
 
 //common css end
 
@@ -730,6 +695,7 @@ textarea {
     background-color: $main-bg;
     min-height: 100vh;
     height: auto;
+    padding-bottom: 80px;
 
     .container {
         position: relative;
@@ -1948,10 +1914,12 @@ textarea {
 
     .main-content {
         padding-top: 80px;
-        .header-h{
+
+        .header-h {
             margin-bottom: 40px;
             text-align: center;
         }
+
         #team-cards {
             padding-bottom: calc(var(--numcards) * var(--card-top-offset));
             // margin-bottom: var(--card-margin);
@@ -2022,6 +1990,8 @@ textarea {
                             line-height: 28px;
                             color: $sec-txt-color;
                         }
+
+
                     }
 
                     .img-content {
@@ -2030,6 +2000,20 @@ textarea {
                         display: flex;
                         align-items: end;
                         justify-content: center;
+                        position: relative;
+
+                        .img-box {
+                            width: 100px;
+                            height: 100px;
+                            position: absolute;
+                            left: -56px;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                opacity: 0.2;
+                            }
+                        }
 
                         figure {
                             grid-area: img;
@@ -2085,265 +2069,6 @@ textarea {
                 }
             }
         }
-    }
-
-    .main-about {
-        display: block;
-
-        .section {
-            .sticky {
-                .header-h {
-                    transform: translate(67px, 45px);
-                }
-
-                .col.col--1.mod--profess {
-                    width: 40% !important;
-                    padding: 9rem 2rem 9rem 2.5rem;
-                    background-color: #C0E1FF;
-
-                    .profess__slider1-wrap {
-                        max-width: 30rem;
-                    }
-
-                    .swiper.mod--profess1 {
-                        margin-left: 80px;
-                    }
-
-                    .profess__title {
-                        font-weight: 500;
-                        font-size: 32px;
-                        line-height: 32px;
-                        color: $black-color;
-
-                        &.sec {
-                            font-weight: 400;
-                            font-size: 20px;
-                            line-height: 28px;
-                            text-transform: capitalize;
-                        }
-                    }
-
-                    .profess__p {
-                        font-weight: 400;
-                        font-size: 20px;
-                        line-height: 28px;
-                        color: $black-color;
-                    }
-
-                    .swiper-slide.mod--profess1 {
-                        background-color: #C0E1FF;
-
-                    }
-
-
-                }
-
-                .col.col--2.mod--profess {
-                    width: 60% !important;
-                    background-color: #49657D;
-                    border-top-left-radius: 3rem;
-
-                    .swiper-slide.mod--profess2 {
-                        background-color: #49657D;
-                    }
-
-                    .profess__img {
-                        width: 464px;
-                        height: 493px;
-                    }
-
-                    .swiper__pagination {
-                        opacity: 0;
-                    }
-                }
-            }
-        }
-
-        // .section {
-        //     &.mod--profess {
-        //         min-height: 200vh;
-        //         padding-top: 0;
-        //         padding-bottom: 0;
-
-        //         .sticky {
-        //             position: -webkit-sticky;
-        //             position: sticky;
-        //             top: 0;
-        //             overflow: hidden;
-        //             height: 100vh;
-        //             margin-right: -2.5rem;
-        //             margin-left: -2.5rem;
-
-        //             .columns {
-        //                 &.mod--profess {
-        //                     height: 100%;
-        //                     -webkit-box-align: end;
-        //                     -webkit-align-items: flex-end;
-        //                     -ms-flex-align: end;
-        //                     align-items: flex-end;
-
-        //                     .col.col--1.mod--profess {
-        //                         display: -webkit-box;
-        //                         display: -webkit-flex;
-        //                         display: -ms-flexbox;
-        //                         display: flex;
-        //                         overflow: hidden;
-        //                         width: 35%;
-        //                         height: 80%;
-        //                         padding: 9rem 5rem 9rem 2.5rem;
-        //                         -webkit-box-orient: vertical;
-        //                         -webkit-box-direction: normal;
-        //                         -webkit-flex-direction: column;
-        //                         -ms-flex-direction: column;
-        //                         flex-direction: column;
-        //                         -webkit-box-pack: center;
-        //                         -webkit-justify-content: center;
-        //                         -ms-flex-pack: center;
-        //                         justify-content: center;
-        //                         -webkit-box-align: end;
-        //                         -webkit-align-items: flex-end;
-        //                         -ms-flex-align: end;
-        //                         align-items: flex-end;
-        //                         -webkit-box-flex: 0;
-        //                         -webkit-flex: 0 auto;
-        //                         -ms-flex: 0 auto;
-        //                         flex: 0 auto;
-        //                         background-color: #ff8049;
-        //                         color: #fff;
-
-        //                         .profess__slider1-wrap {
-        //                             position: relative;
-        //                             width: 100%;
-        //                             max-width: 23rem;
-        //                             margin-left: auto;
-
-        //                             .swiper__pagination {
-        //                                 position: absolute;
-        //                                 left: -8.75rem;
-        //                                 top: 9.125rem;
-        //                                 display: -webkit-box;
-        //                                 display: -webkit-flex;
-        //                                 display: -ms-flexbox;
-        //                                 display: flex;
-        //                                 width: 17.9375rem;
-        //                                 height: 0.125rem;
-        //                                 max-height: 0.125rem;
-        //                                 -webkit-box-flex: 1;
-        //                                 -webkit-flex: 1;
-        //                                 -ms-flex: 1;
-        //                                 flex: 1;
-        //                                 border-radius: 0.25rem;
-        //                                 background-color: rgba(255, 255, 255, 0.3);
-        //                                 -webkit-transform: rotate(90deg);
-        //                                 -ms-transform: rotate(90deg);
-        //                                 transform: rotate(90deg);
-
-        //                                 .swiper__pagination-dot {
-        //                                     position: relative;
-        //                                     width: 33.333333333333336%;
-        //                                     -webkit-box-flex: 0;
-        //                                     -webkit-flex: 0 0 auto;
-        //                                     -ms-flex: 0 0 auto;
-        //                                     flex: 0 0 auto;
-        //                                     border-radius: 0.25rem;
-        //                                     background-color: #fff;
-        //                                     opacity: 0;
-
-        //                                     &.active {
-        //                                         opacity: 1;
-        //                                     }
-        //                                 }
-        //                             }
-
-        //                             .swiper {
-        //                                 position: relative;
-        //                                 width: 100%;
-
-        //                                 &.mod--profess1 {
-        //                                     overflow: hidden;
-        //                                     max-width: 20rem;
-        //                                     margin-right: 0;
-        //                                     margin-left: auto;
-
-        //                                     .swiper-wrapper {
-        //                                         display: -webkit-box;
-        //                                         display: -webkit-flex;
-        //                                         display: -ms-flexbox;
-        //                                         display: flex;
-        //                                         width: 100%;
-        //                                         height: 100%;
-        //                                         -webkit-box-orient: horizontal;
-        //                                         -webkit-box-direction: normal;
-        //                                         -webkit-flex-direction: row;
-        //                                         -ms-flex-direction: row;
-        //                                         flex-direction: row;
-        //                                         -webkit-flex-wrap: nowrap;
-        //                                         -ms-flex-wrap: nowrap;
-        //                                         flex-wrap: nowrap;
-        //                                         -webkit-box-align: stretch;
-        //                                         -webkit-align-items: stretch;
-        //                                         -ms-flex-align: stretch;
-        //                                         align-items: stretch;
-
-        //                                         .swiper-slide {
-        //                                             &.mod--profess1 {
-        //                                                 width: 100%;
-        //                                                 height: auto;
-        //                                                 -webkit-box-flex: 0;
-        //                                                 -webkit-flex: 0 0 auto;
-        //                                                 -ms-flex: 0 0 auto;
-        //                                                 flex: 0 0 auto;
-        //                                                 background-color: #ff8049;
-
-        //                                                 .overflow-hidden {
-        //                                                     position: relative;
-        //                                                     z-index: 2;
-        //                                                     overflow: hidden;
-
-        //                                                     .profess__title {
-        //                                                         -webkit-transform: translate(0, 110%);
-        //                                                         -ms-transform: translate(0, 110%);
-        //                                                         transform: translate(0, 110%);
-        //                                                         -webkit-transition: 0.8s;
-        //                                                         transition: 0.8s;
-        //                                                         color: #fff;
-
-        //                                                         &.active {
-        //                                                             -webkit-transform: none;
-        //                                                             -ms-transform: none;
-        //                                                             transform: none;
-        //                                                         }
-        //                                                     }
-
-        //                                                     .profess__p {
-        //                                                         position: relative;
-        //                                                         -webkit-transform: translate(0, 110%);
-        //                                                         -ms-transform: translate(0, 110%);
-        //                                                         transform: translate(0, 110%);
-        //                                                         -webkit-transition: 0.8s;
-        //                                                         transition: 0.8s;
-        //                                                         color: #fff;
-        //                                                         font-size: 1.125rem;
-
-        //                                                         &.active {
-        //                                                             -webkit-transform: none;
-        //                                                             -ms-transform: none;
-        //                                                             transform: none;
-        //                                                         }
-        //                                                     }
-        //                                                 }
-        //                                             }
-        //                                         }
-        //                                     }
-        //                                 }
-        //                             }
-        //                         }
-        //                     }
-        //                 }
-        //             }
-        //         }
-        //     }
-        // }
     }
 }
 
@@ -2651,6 +2376,7 @@ textarea {
 
 .photobook-type {
     position: relative;
+    scroll-snap-type: y mandatory;
 
     .heading {
         font-weight: 600;
@@ -2661,8 +2387,9 @@ textarea {
     }
 
     .main-content {
-
         .pre-school {
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
             background-color: #C0E1FF;
             padding: 60px 0px;
 

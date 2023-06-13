@@ -380,26 +380,6 @@ textarea::-webkit-input-placeholder {
   color: #F4B4B7;
 }
 
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-  position: relative;
-  width: 33.3333333333%;
-  flex: 0 0 auto;
-  border-radius: 4px;
-  background-color: #49657D;
-  max-height: 2px;
-  margin: 0px;
-  transition: all 100ms ease;
-  opacity: 0;
-}
-
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  opacity: 1;
-}
-
-.swiper-pagination-bullets.swiper-pagination-horizontal {
-  left: -140px;
-  width: 287px;
-}
 .navbar {
   padding: 1rem 1rem !important;
 }
@@ -575,6 +555,7 @@ textarea::-webkit-input-placeholder {
   background-color: #FFF8DA;
   min-height: 100vh;
   height: auto;
+  padding-bottom: 80px;
 }
 .main-home .container {
   position: relative;
@@ -1538,6 +1519,18 @@ textarea::-webkit-input-placeholder {
   display: flex;
   align-items: end;
   justify-content: center;
+  position: relative;
+}
+.our-team .main-content #team-cards .card .card__content .img-content .img-box {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: -56px;
+}
+.our-team .main-content #team-cards .card .card__content .img-content .img-box img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
 }
 .our-team .main-content #team-cards .card .card__content .img-content figure {
   grid-area: img;
@@ -1580,59 +1573,6 @@ textarea::-webkit-input-placeholder {
       transform: scale(calc(1.1 - 0.1 * var(--reverse-index)));
     }
   }
-}
-.our-team .main-about {
-  display: block;
-}
-.our-team .main-about .section .sticky .header-h {
-  transform: translate(67px, 45px);
-}
-.our-team .main-about .section .sticky .col.col--1.mod--profess {
-  width: 40% !important;
-  padding: 9rem 2rem 9rem 2.5rem;
-  background-color: #C0E1FF;
-}
-.our-team .main-about .section .sticky .col.col--1.mod--profess .profess__slider1-wrap {
-  max-width: 30rem;
-}
-.our-team .main-about .section .sticky .col.col--1.mod--profess .swiper.mod--profess1 {
-  margin-left: 80px;
-}
-.our-team .main-about .section .sticky .col.col--1.mod--profess .profess__title {
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 32px;
-  color: #1E1E1E;
-}
-.our-team .main-about .section .sticky .col.col--1.mod--profess .profess__title.sec {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 28px;
-  text-transform: capitalize;
-}
-.our-team .main-about .section .sticky .col.col--1.mod--profess .profess__p {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 28px;
-  color: #1E1E1E;
-}
-.our-team .main-about .section .sticky .col.col--1.mod--profess .swiper-slide.mod--profess1 {
-  background-color: #C0E1FF;
-}
-.our-team .main-about .section .sticky .col.col--2.mod--profess {
-  width: 60% !important;
-  background-color: #49657D;
-  border-top-left-radius: 3rem;
-}
-.our-team .main-about .section .sticky .col.col--2.mod--profess .swiper-slide.mod--profess2 {
-  background-color: #49657D;
-}
-.our-team .main-about .section .sticky .col.col--2.mod--profess .profess__img {
-  width: 464px;
-  height: 493px;
-}
-.our-team .main-about .section .sticky .col.col--2.mod--profess .swiper__pagination {
-  opacity: 0;
 }
 
 .perfection {
@@ -1867,6 +1807,7 @@ textarea::-webkit-input-placeholder {
 
 .photobook-type {
   position: relative;
+  scroll-snap-type: y mandatory;
 }
 .photobook-type .heading {
   font-weight: 600;
@@ -1876,6 +1817,8 @@ textarea::-webkit-input-placeholder {
   margin-bottom: 60px;
 }
 .photobook-type .main-content .pre-school {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
   background-color: #C0E1FF;
   padding: 60px 0px;
 }
