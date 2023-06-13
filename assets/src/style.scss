@@ -1932,6 +1932,160 @@ textarea {
 //our team sec start
 .our-team {
     background-color: $white-color;
+    // --card-height: 60vw;
+    --card-margin: 4vw;
+    // --card-top-offset: 1em;
+    // --numcards: 4;
+    // --outline-width: 0px;
+
+    .card {
+        border: none;
+    }
+
+    ul {
+        margin-bottom: 0px;
+    }
+
+    .main-content {
+        padding-top: 80px;
+        .header-h{
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        #team-cards {
+            padding-bottom: calc(var(--numcards) * var(--card-top-offset));
+            // margin-bottom: var(--card-margin);
+
+            list-style: none;
+            // outline: calc(var(--outline-width) * 10) solid blue;
+
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(var(--numcards), var(--card-height));
+            // gap: var(--card-margin);
+
+            #card_1 {
+                --index: 1;
+            }
+
+            #card_2 {
+                --index: 2;
+            }
+
+            #card_3 {
+                --index: 3;
+            }
+
+            #card_4 {
+                --index: 4;
+            }
+
+            .card {
+                position: sticky;
+                top: 0;
+                // padding-top: calc(var(--index) * var(--card-top-offset));
+                // outline: var(--outline-width) solid hotpink;
+
+                .card__content {
+                    color: rgb(10, 5, 7);
+                    overflow: hidden;
+                    background: #C0E1FF;
+                    display: grid;
+                    grid-template-areas: "text img";
+                    grid-template-columns: 0.9fr 1fr;
+                    grid-template-rows: auto;
+                    align-items: stretch;
+                    // outline: var(--outline-width) solid lime;
+
+                    .inner-content {
+                        grid-area: text;
+                        width: 80%;
+                        place-self: center;
+                        text-align: left;
+                        display: grid;
+                        place-items: start;
+
+                        .main-header {
+                            margin-bottom: 10px;
+                        }
+
+                        .p-txt {
+                            font-weight: 400;
+                            font-size: 20px;
+                            line-height: 28px;
+                            margin-bottom: 20px;
+                        }
+
+                        .p-header {
+                            font-weight: 400;
+                            font-size: 20px;
+                            line-height: 28px;
+                            color: $sec-txt-color;
+                        }
+                    }
+
+                    .img-content {
+                        background: #49657D;
+                        height: 100vh;
+                        display: flex;
+                        align-items: end;
+                        justify-content: center;
+
+                        figure {
+                            grid-area: img;
+                            overflow: hidden;
+                            margin: 0;
+                            width: 464px;
+                            height: 493px;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                }
+            }
+
+            @supports (animation-timeline: works) {
+
+                @scroll-timeline cards-element-scrolls-in-body {
+                    source: selector(body);
+                    scroll-offsets:
+                        selector(#cards) start 1,
+                        selector(#cards) start 0;
+                    start: selector(#cards) start 1;
+                    end: selector(#cards) start 0;
+                    time-range: 4s;
+                }
+
+                .card {
+                    --index0: calc(var(--index) - 1);
+                    --reverse-index: calc(var(--numcards) - var(--index0));
+                    --reverse-index0: calc(var(--reverse-index) - 1);
+                }
+
+                .card__content {
+                    transform-origin: 50% 0%;
+                    will-change: transform;
+
+                    --duration: calc(var(--reverse-index0) * 1s);
+                    --delay: calc(var(--index0) * 1s);
+
+                    animation: var(--duration) linear scale var(--delay) forwards;
+                    animation-timeline: cards-element-scrolls-in-body;
+                }
+
+                @keyframes scale {
+                    to {
+                        transform:
+                            scale(calc(1.1 - calc(0.1 * var(--reverse-index))));
+                    }
+                }
+            }
+        }
+    }
 
     .main-about {
         display: block;
