@@ -1278,7 +1278,7 @@ textarea {
                                     text-overflow: ellipsis;
                                     overflow: hidden;
                                     display: -webkit-box;
-                                    -webkit-line-clamp: 8;
+                                    -webkit-line-clamp: 7;
                                     -webkit-box-orient: vertical;
                                 }
                             }
@@ -1325,7 +1325,7 @@ textarea {
                             &.p-txt {
                                 font-weight: 300;
                                 font-size: 16px;
-                                line-height: 15px;
+                                line-height: 18px;
                                 color: $white-color;
                                 text-align: start;
                                 position: absolute;
@@ -1479,6 +1479,8 @@ textarea {
                     letter-spacing: 0.08em;
                     color: $white-color;
                     margin-bottom: 30px;
+                    min-width: 226px;
+                    text-align: start;
                 }
 
                 .social-sec {
@@ -1911,10 +1913,6 @@ textarea {
                 letter-spacing: 0.01em;
                 color: $sec-txt-color;
                 margin-bottom: 20px;
-
-                &.second {
-                    color: $black-color;
-                }
             }
         }
     }
@@ -2197,7 +2195,7 @@ textarea {
     background-color: $white-color;
 
     .main-content {
-        padding: 80px 30px;
+        padding: 80px 30px 20px 30px;
         animation: drop-in 1000ms ease 500ms backwards;
 
         @keyframes drop-in {
@@ -2234,6 +2232,7 @@ textarea {
                 .second-img {
                     width: 274px;
                     height: 211px;
+                    transform: translateY(-80px);
 
                     img {
                         width: 100%;
@@ -2245,6 +2244,7 @@ textarea {
 
             .header {
                 display: flex;
+                flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 z-index: 1;
@@ -2254,6 +2254,7 @@ textarea {
                     width: 990px;
                     letter-spacing: 0;
                     margin-bottom: 0px;
+                    margin-bottom: 40px;
 
                     .unlimited-txt {
                         color: #F4B4B7;
@@ -2530,6 +2531,7 @@ textarea {
 
                         &:hover {
                             background-color: transparent;
+                            box-shadow: 0 0 25px rgb(157 225 222 / 55%);
                         }
                     }
                 }
@@ -2559,6 +2561,7 @@ textarea {
 
                             &:hover {
                                 background-color: transparent;
+                                box-shadow: 0 0 25px rgb(243 215 109 / 55%);
                             }
                         }
                     }
@@ -2576,6 +2579,7 @@ textarea {
 
                             &:hover {
                                 background-color: transparent;
+                                box-shadow: 0 0 25px rgb(216 163 229 / 55%);
                             }
                         }
                     }
@@ -2593,6 +2597,7 @@ textarea {
 
                             &:hover {
                                 background-color: transparent;
+                                box-shadow: 0 0 25px rgb(140 249 138 / 55%);
                             }
                         }
                     }
@@ -2610,6 +2615,7 @@ textarea {
 
                             &:hover {
                                 background-color: transparent;
+                                box-shadow: 0 0 25px rgb(223 145 152 / 55%);
                             }
                         }
                     }

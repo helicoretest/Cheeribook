@@ -978,7 +978,7 @@ textarea::-webkit-input-placeholder {
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 8;
+  -webkit-line-clamp: 7;
   -webkit-box-orient: vertical;
 }
 .home-card-sec .main-content .owl-carousel .item .panel-card:hover .card-content .main-btn {
@@ -1014,7 +1014,7 @@ textarea::-webkit-input-placeholder {
 .home-card-sec .main-content .owl-carousel .item .panel-card .card-content .para.p-txt {
   font-weight: 300;
   font-size: 16px;
-  line-height: 15px;
+  line-height: 18px;
   color: #FFFFFF;
   text-align: start;
   position: absolute;
@@ -1124,6 +1124,8 @@ textarea::-webkit-input-placeholder {
   letter-spacing: 0.08em;
   color: #FFFFFF;
   margin-bottom: 30px;
+  min-width: 226px;
+  text-align: start;
 }
 .get-in-touch .main-content .card .first-content .social-sec .p-txt {
   font-size: 20px;
@@ -1451,9 +1453,6 @@ textarea::-webkit-input-placeholder {
   color: #515151;
   margin-bottom: 20px;
 }
-.about-memories .main-content .second-content .p-txt.second {
-  color: #1E1E1E;
-}
 
 .our-team {
   background-color: #FFFFFF;
@@ -1516,7 +1515,7 @@ textarea::-webkit-input-placeholder {
   background-color: #FFFFFF;
 }
 .perfection .main-content {
-  padding: 80px 30px;
+  padding: 80px 30px 20px 30px;
   animation: drop-in 1000ms ease 500ms backwards;
 }
 @keyframes drop-in {
@@ -1549,6 +1548,7 @@ textarea::-webkit-input-placeholder {
 .perfection .main-content .content .img-boxes .second-img {
   width: 274px;
   height: 211px;
+  transform: translateY(-80px);
 }
 .perfection .main-content .content .img-boxes .second-img img {
   width: 100%;
@@ -1557,6 +1557,7 @@ textarea::-webkit-input-placeholder {
 }
 .perfection .main-content .content .header {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 1;
@@ -1566,6 +1567,7 @@ textarea::-webkit-input-placeholder {
   width: 990px;
   letter-spacing: 0;
   margin-bottom: 0px;
+  margin-bottom: 40px;
 }
 .perfection .main-content .content .header .sec-header .unlimited-txt {
   color: #F4B4B7;
@@ -1778,6 +1780,7 @@ textarea::-webkit-input-placeholder {
 }
 .photobook-type .main-content .pre-school .first-content .btn-first .main-btn:hover {
   background-color: transparent;
+  box-shadow: 0 0 25px rgba(157, 225, 222, 0.55);
 }
 .photobook-type .main-content .pre-school .first-content .img-container {
   display: flex;
@@ -1798,6 +1801,7 @@ textarea::-webkit-input-placeholder {
 }
 .photobook-type .main-content .pre-school.life-style .first-content .btn-first .main-btn:hover {
   background-color: transparent;
+  box-shadow: 0 0 25px rgba(243, 215, 109, 0.55);
 }
 .photobook-type .main-content .pre-school.guess-book {
   background-color: #D4C0FF;
@@ -1808,6 +1812,7 @@ textarea::-webkit-input-placeholder {
 }
 .photobook-type .main-content .pre-school.guess-book .first-content .btn-first .main-btn:hover {
   background-color: transparent;
+  box-shadow: 0 0 25px rgba(216, 163, 229, 0.55);
 }
 .photobook-type .main-content .pre-school.business-portfolio {
   background-color: #C6FFC0;
@@ -1818,6 +1823,7 @@ textarea::-webkit-input-placeholder {
 }
 .photobook-type .main-content .pre-school.business-portfolio .first-content .btn-first .main-btn:hover {
   background-color: transparent;
+  box-shadow: 0 0 25px rgba(140, 249, 138, 0.55);
 }
 .photobook-type .main-content .pre-school.new-born {
   background-color: #FFD8D8;
@@ -1828,6 +1834,7 @@ textarea::-webkit-input-placeholder {
 }
 .photobook-type .main-content .pre-school.new-born .first-content .btn-first .main-btn:hover {
   background-color: transparent;
+  box-shadow: 0 0 25px rgba(223, 145, 152, 0.55);
 }
 
 .w {
