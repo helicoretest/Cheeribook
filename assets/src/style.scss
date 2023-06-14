@@ -5,6 +5,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Rubik&family=Work+Sans&display=swap');
 
+//font-awesome icon
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
+
 html {
     scroll-behavior: smooth;
 }
@@ -452,6 +455,107 @@ textarea {
     color: #F4B4B7;
 }
 
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none !important;
+    }
+}
+
+.accordion {
+    .card {
+        background-color: transparent !important;
+        border-left: none;
+        border-right: none;
+
+        &:nth-child(1) {
+            border-top: none !important;
+        }
+
+        &:nth-last-child(1) {
+            border-bottom: none !important;
+        }
+
+        .card-header {
+            background-color: transparent !important;
+            border-bottom: none !important;
+            padding: 0.75rem 0rem;
+
+            button {
+                &::before {
+                    float: right !important;
+                    font-family: FontAwesome;
+                    content: "\f068";
+                    padding: 1px 10px;
+                    background: $main-btn-bg;
+                    border-radius: 3px;
+                    font-size: 15px;
+                    color: $white-color;
+                    font-weight: 100;
+                    margin-left: 20px;
+                    -webkit-text-stroke: 1.5px $main-btn-bg;
+                }
+
+                &.collapsed {
+                    &::before {
+                        float: right !important;
+                        font-family: FontAwesome;
+                        content: "\f067";
+                        color: $white-color;
+                        padding: 1px 10px;
+                        background: $main-btn-bg;
+                        border-radius: 3px;
+                        font-size: 15px;
+                        font-weight: 100;
+                        margin-left: 20px;
+                        -webkit-text-stroke: 1.5px $main-btn-bg;
+                    }
+                }
+            }
+
+            .accordion-btn {
+                &.btn-link {
+                    font-size: 28px;
+                    font-weight: 700;
+                    line-height: 31px;
+                    color: $main-btn-bg;
+                    padding: 0px !important;
+                    margin: 20px 0px 8px 0px;
+                    text-transform: capitalize;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+
+                    &:focus {
+                        box-shadow: none;
+                        text-decoration: none;
+                    }
+
+                    &.que {
+                        font-size: 24px;
+                        font-weight: 500;
+                        line-height: 28px;
+                        color: #1E1E1E;
+                    }
+                }
+            }
+        }
+
+        .card-body {
+            padding: 0 0 30px 0;
+
+            &.para-txt {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 28px;
+                color: $sec-txt-color;
+            }
+        }
+    }
+}
 
 //common css end
 
@@ -898,6 +1002,12 @@ textarea {
                     align-items: center;
                     justify-content: center;
                     cursor: pointer;
+                    color: $black-color;
+
+                    &:hover {
+                        text-decoration: none !important;
+                        color: $black-color;
+                    }
                 }
             }
         }
@@ -1777,7 +1887,7 @@ textarea {
 
             .p-txt {
                 margin-top: 20px;
-                width: 222px;
+                width: 215px;
                 font-size: 16px;
                 line-height: 28px;
                 text-align: center;
@@ -2240,7 +2350,7 @@ textarea {
                 }
 
                 .box {
-                    border: 1px solid black;
+                    border: 1px solid #8d8d8d;
                     width: 380px;
                     height: 380px;
                     position: absolute;
@@ -2984,8 +3094,6 @@ textarea {
     transition: transform 0.5s, bottom 0.6s, left 0.6s, width 0.3s, box-shadow 0s;
 }
 
-
-
 //our-gallary start
 .gallary {
     background-color: $white-color;
@@ -3248,3 +3356,31 @@ textarea {
 }
 
 //hot-selling end
+
+//Faq page start
+.faq {
+    background-color: $white-color;
+
+    .main-content {
+        padding: 80px 0px 40px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+
+        .sec-header {
+            margin-bottom: 60px;
+        }
+
+        .content {
+            width: 70%;
+        }
+
+        .card {
+            border-color: $main-btn-bg;
+        }
+    }
+}
+
+//Faq page End

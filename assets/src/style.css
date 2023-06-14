@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Rubik&family=Work+Sans&display=swap");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
 * {
   margin: 0;
   padding: 0;
@@ -380,6 +381,88 @@ textarea::-webkit-input-placeholder {
   color: #F4B4B7;
 }
 
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none !important;
+}
+
+.accordion .card {
+  background-color: transparent !important;
+  border-left: none;
+  border-right: none;
+}
+.accordion .card:nth-child(1) {
+  border-top: none !important;
+}
+.accordion .card:nth-last-child(1) {
+  border-bottom: none !important;
+}
+.accordion .card .card-header {
+  background-color: transparent !important;
+  border-bottom: none !important;
+  padding: 0.75rem 0rem;
+}
+.accordion .card .card-header button::before {
+  float: right !important;
+  font-family: FontAwesome;
+  content: "\f068";
+  padding: 1px 10px;
+  background: #FC8F82;
+  border-radius: 3px;
+  font-size: 15px;
+  color: #FFFFFF;
+  font-weight: 100;
+  margin-left: 20px;
+  -webkit-text-stroke: 1.5px #FC8F82;
+}
+.accordion .card .card-header button.collapsed::before {
+  float: right !important;
+  font-family: FontAwesome;
+  content: "\f067";
+  color: #FFFFFF;
+  padding: 1px 10px;
+  background: #FC8F82;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: 100;
+  margin-left: 20px;
+  -webkit-text-stroke: 1.5px #FC8F82;
+}
+.accordion .card .card-header .accordion-btn.btn-link {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 31px;
+  color: #FC8F82;
+  padding: 0px !important;
+  margin: 20px 0px 8px 0px;
+  text-transform: capitalize;
+}
+.accordion .card .card-header .accordion-btn.btn-link:hover {
+  text-decoration: none;
+}
+.accordion .card .card-header .accordion-btn.btn-link:focus {
+  box-shadow: none;
+  text-decoration: none;
+}
+.accordion .card .card-header .accordion-btn.btn-link.que {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  color: #1E1E1E;
+}
+.accordion .card .card-body {
+  padding: 0 0 30px 0;
+}
+.accordion .card .card-body.para-txt {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #515151;
+}
+
 .navbar {
   padding: 1rem 1rem !important;
 }
@@ -711,6 +794,11 @@ textarea::-webkit-input-placeholder {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  color: #1E1E1E;
+}
+.about-main .main-content .first-div .about-faq .arrow-btn:hover {
+  text-decoration: none !important;
+  color: #1E1E1E;
 }
 
 .service-main {
@@ -1356,7 +1444,7 @@ textarea::-webkit-input-placeholder {
 }
 .moments .main-content .content .p-txt {
   margin-top: 20px;
-  width: 222px;
+  width: 215px;
   font-size: 16px;
   line-height: 28px;
   text-align: center;
@@ -1700,7 +1788,7 @@ textarea::-webkit-input-placeholder {
   transform: translate(41px, 50px);
 }
 .main-pixels .portrait .main-content .first-content .box {
-  border: 1px solid black;
+  border: 1px solid #8d8d8d;
   width: 380px;
   height: 380px;
   position: absolute;
@@ -2556,4 +2644,24 @@ textarea::-webkit-input-placeholder {
   line-height: 20px;
   text-transform: capitalize;
   color: #1E1E1E;
+}
+
+.faq {
+  background-color: #FFFFFF;
+}
+.faq .main-content {
+  padding: 80px 0px 40px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.faq .main-content .sec-header {
+  margin-bottom: 60px;
+}
+.faq .main-content .content {
+  width: 70%;
+}
+.faq .main-content .card {
+  border-color: #FC8F82;
 }/*# sourceMappingURL=style.css.map */
