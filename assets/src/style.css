@@ -1126,7 +1126,7 @@ a:hover {
 }
 
 .client-story {
-  background: linear-gradient(180deg, #FFFCDA 0%, rgba(205, 209, 251, 0) 151.18%);
+  background: linear-gradient(180deg, #FFFCDA 0%, rgba(205, 209, 251, 0.67) 100%);
 }
 .client-story .main-content {
   padding: 120px 0px;
