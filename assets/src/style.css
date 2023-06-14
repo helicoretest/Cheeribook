@@ -1208,8 +1208,77 @@ a:hover {
   color: #FFFFFF;
   margin-bottom: 15px;
 }
-.get-in-touch .main-content .card .first-content .social-sec .social-icons {
+.get-in-touch .main-content .card .first-content .social-sec .social-icons .icon-ul {
+  width: 100%;
+  text-align: center;
   display: flex;
+}
+.get-in-touch .main-content .card .first-content .social-sec .social-icons .icon-ul li {
+  list-style: none;
+  display: inline-block;
+}
+.get-in-touch .main-content .card .first-content .social-sec .social-icons .icon-ul li:nth-child(1) .f-link::before {
+  background: #3b5999;
+}
+.get-in-touch .main-content .card .first-content .social-sec .social-icons .icon-ul li:nth-child(2) .f-link::before {
+  background: #55acee;
+}
+.get-in-touch .main-content .card .first-content .social-sec .social-icons .icon-ul li:nth-child(3) .f-link::before {
+  background: #dd4b39;
+}
+.get-in-touch .main-content .card .first-content .social-sec .social-icons .icon-ul li:nth-child(4) .f-link::before {
+  background: #0077B5;
+}
+.get-in-touch .main-content .card .first-content .social-sec .social-icons .icon-ul li .f-link {
+  position: relative;
+  text-decoration: none;
+  color: #262626;
+  background: #fff;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 100px;
+  border-radius: 50%;
+  font-size: 20px;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.get-in-touch .main-content .card .first-content .social-sec .social-icons .icon-ul li .f-link:hover {
+  color: #fff;
+}
+.get-in-touch .main-content .card .first-content .social-sec .social-icons .icon-ul li .f-link:hover::before {
+  transform: translateX(0) scale(0.9);
+}
+.get-in-touch .main-content .card .first-content .social-sec .social-icons .icon-ul li .f-link:hover::after {
+  left: 50%;
+}
+.get-in-touch .main-content .card .first-content .social-sec .social-icons .icon-ul li .f-link::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100px) scale(0);
+  border-radius: 50%;
+  z-index: -2;
+  transition: 0.5s;
+}
+.get-in-touch .main-content .card .first-content .social-sec .social-icons .icon-ul li .f-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: -1;
+  transition: 0.5s;
+  transition-delay: 0.5s;
 }
 .get-in-touch .main-content .card .first-content .social-sec .social-icons .icon-box {
   border: 1px solid #FFFFFF;
