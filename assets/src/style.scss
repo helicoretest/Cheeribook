@@ -1468,7 +1468,26 @@ a {
     .main-content {
         padding: 120px 0px;
 
-        .first-content {
+        .one{
+            position:relative;
+            // &:after{
+            //   content:"";
+            //   display:block;
+            //   clear:both;
+            // }
+        }
+
+        .right-child {
+
+            &.posFix{
+                position:fixed;
+                top:25px;
+                max-width: 20%;
+              }
+                &.posAbs{
+                position:absolute;
+                bottom:25px;
+              }
             .sec-header {
                 line-height: 82px;
                 letter-spacing: 0.06em;
@@ -1506,6 +1525,7 @@ a {
                     border-radius: 12px;
                     padding: 40px 20px;
                     margin-bottom: 40px;
+                    
 
                     .p-txt {
                         font-size: 16px;

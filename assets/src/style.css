@@ -1131,19 +1131,31 @@ a:hover {
 .client-story .main-content {
   padding: 120px 0px;
 }
-.client-story .main-content .first-content .sec-header {
+.client-story .main-content .one {
+  position: relative;
+}
+.client-story .main-content .right-child.posFix {
+  position: fixed;
+  top: 25px;
+  max-width: 20%;
+}
+.client-story .main-content .right-child.posAbs {
+  position: absolute;
+  bottom: 25px;
+}
+.client-story .main-content .right-child .sec-header {
   line-height: 82px;
   letter-spacing: 0.06em;
   margin-bottom: 20px;
   text-align: start;
 }
-.client-story .main-content .first-content .p-txt {
+.client-story .main-content .right-child .p-txt {
   font-size: 20px;
   line-height: 20px;
   margin-bottom: 40px;
   color: #515151;
 }
-.client-story .main-content .first-content .p-txt .doubt {
+.client-story .main-content .right-child .p-txt .doubt {
   font-weight: 500;
   text-decoration: underline;
 }

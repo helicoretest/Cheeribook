@@ -40,7 +40,10 @@
       referrerpolicy="no-referrer"
     />
 
-    <link rel="stylesheet" href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href=" https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
     <title>Cheeribook</title>
   </head>
@@ -1765,9 +1768,9 @@
     <div class="client-story">
       <div class="container">
         <div class="main-content">
-          <div class="row">
-            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
-              <div class="first-content">
+          <div class="row one">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 right">
+              <div class="right-child">
                 <h1 class="sec-header">Our Client’s Stories</h1>
                 <h6 class="p-txt">
                   Without a <span class="doubt">doubt,</span> you'll adore it.
@@ -1927,11 +1930,28 @@
                 </button>
               </div>
             </div>
-            <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12">
+            <div class="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12 left">
               <div class="second-content">
                 <div class="row align-items-start justify-content-end">
                   <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
                     <div class="content first">
+                      <div class="box">
+                        <h4 class="p-txt">
+                          "As a professional photographer, I have high standards
+                          when it comes to print quality and book design. I must
+                          say, this photobook website exceeded my expectations.
+                          The colors in the prints were vibrant and true to
+                          life, and the paper quality was top-notch. The
+                          customization options allowed me to create a unique
+                          and visually stunning book that showcased my work
+                          perfectly. The customer service was also exceptional,
+                          with prompt and helpful responses o my queries. I will
+                          definitely be using this website for all my future
+                          photobook projects! "
+                        </h4>
+                        <h6 class="p-txt name">- David</h6>
+                      </div>
+
                       <div class="box">
                         <h4 class="p-txt">
                           "I am so thrilled with the photobook I created with
@@ -1943,27 +1963,19 @@
 
                       <div class="box">
                         <h4 class="p-txt">
-                          "Cheeribook helped me preserve the memories from my
-                          wedding day in the most beautiful way. The quality of
-                          the book is exceptional, and I love how customizable
-                          it was."
+                          "I recently used this photobook website to create a
+                          wedding album, and I couldn't be happier with the
+                          result. The layout options were plentiful, allowing me
+                          to arrange my photos in a way that told the story of
+                          our special day beautifully. The software was
+                          intuitive and easy to navigate, making the design
+                          process a breeze. When the album arrived, I was blown
+                          away by the quality. The craftsmanship and attention
+                          to detail were evident in every page. It's a treasure
+                          we'll cherish forever. I highly recommend this website
+                          for anyone looking to create a stunning photobook."
                         </h4>
-                        <h6 class="p-txt name">- Matt</h6>
-                      </div>
-
-                      <div class="box">
-                        <h4 class="p-txt">
-                          "One of the standout aspects of XYZ Website is its
-                          vast and diverse content library. Whether you're
-                          interested in news, lifestyle, technology, or any
-                          other subject, you can trust that this website will
-                          have something for you. The articles, blog posts, and
-                          videos are well-written, engaging, and informative,
-                          catering to a wide range of interests. XYZ Website has
-                          become my go-to destination to stay informed,
-                          entertained, and inspired."
-                        </h4>
-                        <h6 class="p-txt name">- Kyle</h6>
+                        <h6 class="p-txt name">- Emily</h6>
                       </div>
                     </div>
                   </div>
@@ -1971,26 +1983,28 @@
                     <div class="content">
                       <div class="box">
                         <h4 class="p-txt">
-                          I was hesitant to create a photobook, but Cheeribook
+                          " I am beyond thrilled with the photobook I ordered
+                          from this website! The quality of the prints is
+                          outstanding, and the attention to detail in the book
+                          design is impeccable. I wanted to create a keepsake
+                          for my family, and this website delivered beyond my
+                          expectations. The user-friendly interface made it easy
+                          for me to upload and arrange my photos, and the final
+                          product arrived quickly and in perfect condition. I
+                          highly recommend this website to anyone looking to
+                          create beautiful photobooks."
+                        </h4>
+                        <h6 class="p-txt name">- Amanda</h6>
+                      </div>
+
+                      <div class="box">
+                        <h4 class="p-txt">
+                          "I was hesitant to create a photobook, but Cheeribook
                           made the process so easy and fun! The end result
                           exceeded my expectations, and I can't wait to order
                           more."
                         </h4>
                         <h6 class="p-txt name">- John</h6>
-                      </div>
-
-                      <div class="box">
-                        <h4 class="p-txt">
-                          "I am thrilled to share my experience with XYZ
-                          Website, which has truly become an indispensable
-                          online resource for me. In this testimonial, I will
-                          highlight the exceptional features, usability, and
-                          reliability that make XYZ Website stand out from the
-                          crowd. Whether you're seeking information,
-                          entertainment, or assistance, this website has got you
-                          covered."
-                        </h4>
-                        <h6 class="p-txt name">- Victoria</h6>
                       </div>
 
                       <div class="box">
@@ -2446,6 +2460,35 @@
           },
         },
       });
+    </script>
+
+    <script>
+      $(window).scroll(reOrder);
+      $(window).resize(reOrder);
+
+      function reOrder() {
+        var mq = window.matchMedia("(min-width: 992px)");
+        if (mq.matches) {
+          $(".right-child").addClass("customm");
+          // $(".right-child h2").text("Scroll");
+          var scroll = $(window).scrollTop(),
+            topContent = $(".one").position().top - 25,
+            sectionHeight = $(".left").height(),
+            rightHeight = $(".right-child").height(),
+            bottomContent = topContent + sectionHeight - rightHeight - 45;
+
+          if (scroll > topContent && scroll < bottomContent) {
+            $(".customm").removeClass("posAbs").addClass("posFix");
+          } else if (scroll > bottomContent) {
+            $(".customm").removeClass("posFix").addClass("posAbs");
+          } else if (scroll < topContent) {
+            $(".customm").removeClass("posFix");
+          }
+        } else {
+          $(".right-child").removeClass("customm posAbs posFix");
+          $(".right-child h2").text("fixed");
+        }
+      }
     </script>
   </body>
 </html>
