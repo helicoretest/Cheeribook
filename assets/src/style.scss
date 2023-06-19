@@ -23,7 +23,7 @@ $white-color : #FFFFFF;
 $black-color : #1E1E1E;
 $main-txt-color: #130C0B;
 $sec-txt-color : #515151;
-$gradint-bg :  linear-gradient(180deg, #FFFCDA 0%, rgba(205, 209, 251, 0.67) 100%);
+$gradint-bg : linear-gradient(180deg, #FFFCDA 0%, rgba(205, 209, 251, 0.67) 100%);
 
 //common css start
 .main-btn {
@@ -976,7 +976,7 @@ a {
             .about-faq {
                 width: 325px;
                 height: 185px;
-                background: linear-gradient(110.41deg, #DDFFD2 10.98%, #9ECD8F 97.64%);
+                background: #C9D4C3;
                 box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
                 border-radius: 20px;
                 position: absolute;
@@ -989,8 +989,6 @@ a {
 
                 &:hover {
                     transform: translate(107px, -44px);
-                    background: linear-gradient(110.41deg, #DDFFD2 10.98%, #9ECD8F 97.64%);
-
                 }
 
                 .arrow-btn {
@@ -1041,7 +1039,7 @@ a {
 
         .content {
             .box {
-                background: #52684B;
+                background: $main-bg;
                 border-radius: 20px;
                 display: grid;
                 grid-template-columns: 64px 1fr;
@@ -1050,6 +1048,15 @@ a {
 
                 &.first {
                     background: $card-bg ;
+
+                    .box-label {
+                        color: $white-color;
+                    }
+
+                    .box-title {
+                        color: $white-color;
+
+                    }
                 }
 
                 &:hover {
@@ -1066,7 +1073,8 @@ a {
 
                 .box-icon {
                     display: grid;
-                    place-items: center;
+                    place-items: end;
+                    justify-content: center;
                 }
 
                 .box-label {
@@ -1078,7 +1086,7 @@ a {
                     font-weight: 400;
                     font-size: 14px;
                     line-height: 14px;
-                    color: $white-color;
+                    color: #52684B;
                     text-transform: uppercase;
                 }
 
@@ -1092,7 +1100,7 @@ a {
                     line-height: 24px;
                     padding-top: 16px;
                     font-weight: 500;
-                    color: $white-color;
+                    color: #52684B;
 
                 }
 
@@ -1125,7 +1133,15 @@ a {
                     cursor: pointer;
 
                     &.first {
-                        background: #52684B;
+                        background: $main-bg;
+
+                        .studio-button-label {
+                            color: #52684B;
+                        }
+
+                        .studio-button-icon {
+                            color: #52684B;
+                        }
                     }
 
                     .studio-button-icon {
@@ -1468,8 +1484,8 @@ a {
     .main-content {
         padding: 120px 0px;
 
-        .one{
-            position:relative;
+        .one {
+            position: relative;
             // &:after{
             //   content:"";
             //   display:block;
@@ -1479,15 +1495,17 @@ a {
 
         .right-child {
 
-            &.posFix{
-                position:fixed;
-                top:25px;
+            &.posFix {
+                position: fixed;
+                top: 25px;
                 max-width: 20%;
-              }
-                &.posAbs{
-                position:absolute;
-                bottom:25px;
-              }
+            }
+
+            &.posAbs {
+                position: absolute;
+                bottom: 25px;
+            }
+
             .sec-header {
                 line-height: 82px;
                 letter-spacing: 0.06em;
@@ -1525,7 +1543,6 @@ a {
                     border-radius: 12px;
                     padding: 40px 20px;
                     margin-bottom: 40px;
-                    
 
                     .p-txt {
                         font-size: 16px;
@@ -2392,6 +2409,20 @@ a {
             background-color: $main-bg;
 
             .main-content {
+                .first-content {
+                    .img-box {
+                        .imag {
+                            background-image: url(./images/retouching-before2.png);
+                        }
+
+                        &:hover {
+                            .imag {
+                                background-image: url(./images/retouching-after2.png);
+                            }
+                        }
+                    }
+                }
+
                 .second-content {
                     .main-btn {
                         background: #D0B93F;
@@ -2419,6 +2450,20 @@ a {
             background-color: #DAEDFF;
 
             .main-content {
+                .first-content {
+                    .img-box {
+                        .imag {
+                            background-image: url(./images/retouching-before3.png);
+                        }
+
+                        &:hover {
+                            .imag {
+                                background-image: url(./images/retouching-after3.png);
+                            }
+                        }
+                    }
+                }
+
                 .second-content {
                     .main-btn {
                         background: #6EA4D8;
@@ -2458,6 +2503,16 @@ a {
                     position: relative;
                     transition: 0.5s ease-out;
 
+
+                    .imag {
+                        background-image: url(./images/retouching-before1.png);
+                        width: 380px;
+                        height: 380px;
+                        border-radius: 20px;
+                        filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
+
+                    }
+
                     img {
                         width: 100%;
                         height: 100%;
@@ -2467,6 +2522,10 @@ a {
 
                     &:hover {
                         transform: translate(41px, 50px);
+
+                        .imag {
+                            background-image: url(./images/retouching-after1.png);
+                        }
                     }
                 }
 
