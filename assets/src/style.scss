@@ -25,6 +25,33 @@ $main-txt-color: #130C0B;
 $sec-txt-color : #515151;
 $gradint-bg : linear-gradient(180deg, #FFFCDA 0%, rgba(205, 209, 251, 0.67) 100%);
 
+// media querirs start
+
+$breakpoints: (
+    "xl" : 2200px,
+    "md": 912px,
+    "sm": 526px,
+);
+
+@mixin large-device {
+    @media (min-width: map-get($breakpoints, "xl")) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: map-get($breakpoints, "md")) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: map-get($breakpoints, "sm")) {
+        @content;
+    }
+}
+
+
 //common css start
 .main-btn {
     position: relative;
@@ -414,6 +441,11 @@ $gradint-bg : linear-gradient(180deg, #FFFCDA 0%, rgba(205, 209, 251, 0.67) 100%
     text-align: center;
     letter-spacing: 0.06em;
     color: $main-txt-color;
+
+    @include mobile {
+        font-size: 48px;
+        line-height: 57px;
+    }
 }
 
 .p-txt {
@@ -422,6 +454,11 @@ $gradint-bg : linear-gradient(180deg, #FFFCDA 0%, rgba(205, 209, 251, 0.67) 100%
     line-height: 28px;
     letter-spacing: 0.02em;
     color: $black-color;
+
+    @include mobile {
+        font-size: 12px;
+        line-height: 18px;
+    }
 }
 
 .p-header {
@@ -801,6 +838,11 @@ a {
     height: auto;
     padding-bottom: 80px;
 
+    @include mobile {
+        min-height: auto;
+        padding-bottom: 0px;
+    }
+
     .container {
         position: relative;
 
@@ -808,6 +850,10 @@ a {
             transform: translateY(500px);
             opacity: 0;
             transition: 1.9s all ease;
+
+            @include mobile {
+                display: none;
+            }
 
             &.active {
                 transform: translateY(0);
@@ -844,6 +890,10 @@ a {
             transform: translateY(100px);
             opacity: 0;
             transition: 2s all ease;
+
+            @include mobile {
+                display: none;
+            }
 
             &.active-sec {
                 transform: translateY(0px);
@@ -886,6 +936,11 @@ a {
         min-height: 730px;
         height: auto;
 
+        @include mobile {
+            min-height: auto;
+            padding: 60px 20px;
+        }
+
         .inner-content {
             overflow: hidden;
 
@@ -901,6 +956,10 @@ a {
                     text-align: center;
                     margin-bottom: 15px;
 
+                    @include mobile {
+                        width: auto;
+                    }
+
                     .unlimited-txt {
                         color: #F4B4B7;
                         // text-shadow:
@@ -915,6 +974,11 @@ a {
                 .p-txt {
                     text-align: center;
                     margin-bottom: 40px;
+
+                    @include mobile {
+                        font-size: 14px;
+                        margin-bottom: 30px;
+                    }
                 }
 
                 .secondary-btn {
@@ -956,6 +1020,16 @@ a {
 
     .main-content {
         padding: 120px 0px;
+
+        @include mobile {
+            padding: 60px 20px;
+        }
+
+        @include mobile {
+            .first-mob-div {
+                order: 2;
+            }
+        }
 
         .first-div {
             position: relative;
@@ -1009,6 +1083,29 @@ a {
                 }
             }
         }
+
+        .sec-div {
+            @include mobile {
+                order: 1;
+            }
+
+            .about-content {
+                .main-header {
+                    @include mobile {
+                        text-align: center;
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .p-txt {
+                    @include mobile {
+                        font-size: 16px;
+                        line-height: 28px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -1032,6 +1129,10 @@ a {
     .main-content {
         padding: 120px 0px 0px 0px;
 
+        @include mobile {
+            padding: 60px 20px;
+        }
+
         .sec-header {
             font-weight: 500;
             margin-bottom: 60px;
@@ -1046,8 +1147,17 @@ a {
                 position: relative;
                 width: 521px;
 
+                @include mobile {
+                    width: auto;
+                    grid-template-columns: 54px 1fr;
+                }
+
                 &.first {
                     background: $card-bg ;
+
+                    @include mobile {
+                        margin-bottom: 40px;
+                    }
 
                     .box-label {
                         color: $white-color;
@@ -1102,6 +1212,11 @@ a {
                     font-weight: 500;
                     color: #52684B;
 
+                    @include mobile {
+                        font-size: 20px;
+                        line-height: 20px;
+                    }
+
                 }
 
                 .box-image {
@@ -1109,6 +1224,11 @@ a {
                     height: 391px;
                     border-radius: 18px 0 18px 0;
                     overflow: hidden;
+
+                    @include mobile {
+                        width: auto;
+                        height: auto;
+                    }
 
                     img {
                         width: 100%;
@@ -1246,6 +1366,10 @@ a {
     .main-content-img {
         padding-top: 80px;
 
+        @include mobile {
+            padding-top: 60px;
+        }
+
         .img-box {
             background: linear-gradient(92.51deg, #FFEEF7 0%, #FFD9B9 45.83%, #FFEAAC 69.79%, #B5FFDE 100%);
             box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
@@ -1258,6 +1382,11 @@ a {
             align-items: center;
             justify-content: center;
 
+            @include mobile{
+                height: auto;
+                padding: 60px 0px;
+            }
+
             .content {
                 text-align: center;
 
@@ -1265,6 +1394,12 @@ a {
                     font-size: 36px;
                     line-height: 36px;
                     margin-bottom: 47px;
+
+                    @include mobile {
+                        font-size: 24px;
+                        line-height: 24px;
+                        margin-bottom: 24px;
+                    }
                 }
             }
         }
@@ -1280,6 +1415,10 @@ a {
 
     .main-content {
         padding: 120px 0px 140px 0px;
+
+        @include mobile {
+            padding: 60px 0px 120px 0px;
+        }
 
         .owl-carousel {
             display: block !important;
@@ -1472,6 +1611,10 @@ a {
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include mobile {
+            padding: 60px 20px;
+        }
     }
 }
 
@@ -1484,6 +1627,10 @@ a {
     .main-content {
         padding: 120px 0px;
 
+        @include mobile {
+            padding: 60px 20px;
+        }
+
         .one {
             position: relative;
             // &:after{
@@ -1494,6 +1641,12 @@ a {
         }
 
         .right-child {
+            @include mobile {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+            }
 
             &.posFix {
                 position: fixed;
@@ -1511,6 +1664,11 @@ a {
                 letter-spacing: 0.06em;
                 margin-bottom: 20px;
                 text-align: start;
+
+                @include mobile {
+                    line-height: 52px;
+                    text-align: center;
+                }
             }
 
             .p-txt {
