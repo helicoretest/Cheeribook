@@ -349,19 +349,23 @@ $breakpoints: (
     fill: $main-btn-bg;
 
     &.pre-school {
-        fill: #829DFC;
+        fill: #DBBC6D;
     }
 
     &.life-style {
-        fill: #D0B93F;
+        fill: $main-btn-bg;
     }
 
     &.guess-book {
-        fill: #CB82FC;
+        fill: #DBBC6D;
     }
 
     &.business {
-        fill: #64C857;
+        fill: $main-btn-bg;
+    }
+
+    &.new-born {
+        fill: #DBBC6D;
     }
 }
 
@@ -1120,6 +1124,20 @@ a {
 
 //home-video sec end
 
+.home-bg-img-sec {
+    background-color: $white-color;
+
+    .img-box {
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
 
 //service sec start
 .service-main {
@@ -1198,6 +1216,10 @@ a {
                     line-height: 14px;
                     color: #52684B;
                     text-transform: uppercase;
+
+                    @include mobile {
+                        height: 52px;
+                    }
                 }
 
                 .box-title {
@@ -1382,9 +1404,9 @@ a {
             align-items: center;
             justify-content: center;
 
-            @include mobile{
+            @include mobile {
                 height: auto;
-                padding: 60px 0px;
+                padding: 40px 0px;
             }
 
             .content {
@@ -1745,8 +1767,9 @@ a {
 
         .card {
             padding: 70px;
-            background-color: #52684B;
+            background-color: $main-bg;
             border-radius: 30px;
+            border: 0px;
 
             .first-content {
                 display: flex;
@@ -1757,7 +1780,7 @@ a {
                     font-weight: 800;
                     line-height: 79px;
                     letter-spacing: 0.08em;
-                    color: $white-color;
+                    color: #52684B;
                     margin-bottom: 30px;
                     min-width: 226px;
                     text-align: start;
@@ -1768,7 +1791,7 @@ a {
                         font-size: 20px;
                         line-height: 20px;
                         letter-spacing: 0.08em;
-                        color: $white-color;
+                        color: #52684B;
                         margin-bottom: 15px;
                     }
 
@@ -1820,7 +1843,7 @@ a {
                                 .f-link {
                                     position: relative;
                                     text-decoration: none;
-                                    color: #262626;
+                                    color: #52684B;
                                     background: #fff;
                                     display: inline-block;
                                     width: 40px;
@@ -1903,7 +1926,7 @@ a {
 
             .second-content {
                 .img-box {
-                    background-image: url("./images/contact-bg1.png");
+                    background-image: url("./images/get-in-touch-bg-1.png");
                     height: 410px;
                     width: 320px;
                 }
@@ -1971,7 +1994,7 @@ a {
                 }
 
                 .img-box-sec {
-                    background-image: url("./images/contact-bg2.png");
+                    background-image: url("./images/get-in-touch-bg-2.png");
                     height: 87px;
                     width: 87px;
                     margin-right: auto;
@@ -2174,6 +2197,11 @@ a {
                     width: 86px;
                     height: 86px;
                 }
+            }
+
+            .main-btn {
+                min-width: 210px;
+                font-size: 18px;
             }
 
             .secondary-btn {
@@ -2561,10 +2589,10 @@ a {
 
 .main-pixels {
     .portrait {
-        background-color: #FFDADB;
+        background-color: $main-bg;
 
         &.product {
-            background-color: $main-bg;
+            background-color: $white-color;
 
             .main-content {
                 .first-content {
@@ -2576,6 +2604,50 @@ a {
                         &:hover {
                             .imag {
                                 background-image: url(./images/retouching-after2.png);
+                            }
+                        }
+                    }
+                }
+
+                .second-content {
+
+
+                    .main-btn {
+                        background: $main-btn-bg;
+                        border: 3px solid $main-btn-bg;
+
+                        .fil0 {
+                            fill: $main-btn-bg;
+                        }
+
+                        &:hover {
+                            background: transparent;
+                            box-shadow: 0 0 25px #fec1958c;
+
+
+                            .fil0 {
+                                fill: $main-btn-bg;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        &.lorem {
+            background-color: $main-bg;
+
+            .main-content {
+                .first-content {
+                    .img-box {
+                        .imag {
+                            background-image: url(./images/retouching-before3.png);
+                        }
+
+                        &:hover {
+                            .imag {
+                                background-image: url(./images/retouching-after3.png);
                             }
                         }
                     }
@@ -2596,47 +2668,6 @@ a {
 
                             .fil0 {
                                 fill: #D0B93F;
-                            }
-                        }
-                    }
-                }
-            }
-
-        }
-
-        &.lorem {
-            background-color: #DAEDFF;
-
-            .main-content {
-                .first-content {
-                    .img-box {
-                        .imag {
-                            background-image: url(./images/retouching-before3.png);
-                        }
-
-                        &:hover {
-                            .imag {
-                                background-image: url(./images/retouching-after3.png);
-                            }
-                        }
-                    }
-                }
-
-                .second-content {
-                    .main-btn {
-                        background: #6EA4D8;
-                        border: 3px solid #6EA4D8;
-
-                        .fil0 {
-                            fill: #6EA4D8;
-                        }
-
-                        &:hover {
-                            background: transparent;
-                            box-shadow: 0 0 25px rgb(157 216 229 / 55%);
-
-                            .fil0 {
-                                fill: #6EA4D8;
                             }
                         }
                     }
@@ -2700,6 +2731,24 @@ a {
 
             .second-content {
                 margin-top: 45px;
+
+                .main-btn {
+                    background: #D0B93F;
+                    border: 3px solid #D0B93F;
+
+                    .fil0 {
+                        fill: #D0B93F;
+                    }
+
+                    &:hover {
+                        background: transparent;
+                        box-shadow: 0 0 25px rgb(253 246 164 / 55%);
+
+                        .fil0 {
+                            fill: #D0B93F;
+                        }
+                    }
+                }
 
                 .p-txt {
                     margin-bottom: 50px;
@@ -2838,7 +2887,7 @@ a {
         .pre-school {
             scroll-snap-align: start;
             scroll-snap-stop: always;
-            background-color: #C0E1FF;
+            background-color: $main-bg;
             padding: 60px 0px;
 
             .first-content {
@@ -2863,13 +2912,13 @@ a {
                     justify-content: center;
 
                     .main-btn {
-                        background: #829DFC;
-                        border: 3px solid #829DFC;
+                        background: #DBBD6D;
+                        border: 3px solid #DBBD6D;
                         padding: 5px 18px;
 
                         &:hover {
                             background-color: transparent;
-                            box-shadow: 0 0 25px rgb(157 225 222 / 55%);
+                            box-shadow: 0 0 25px rgb(231 212 120 / 55%);
                         }
                     }
                 }
@@ -2889,17 +2938,17 @@ a {
             }
 
             &.life-style {
-                background-color: #FFF5C0;
+                background-color: $white-color;
 
                 .first-content {
                     .btn-first {
                         .main-btn {
-                            background: #D0B93F;
-                            border: 3px solid #D0B93F;
+                            background: $main-btn-bg;
+                            border: 3px solid $main-btn-bg;
 
                             &:hover {
                                 background-color: transparent;
-                                box-shadow: 0 0 25px rgb(243 215 109 / 55%);
+                                box-shadow: 0 0 25px #fec1958c;
                             }
                         }
                     }
@@ -2907,35 +2956,34 @@ a {
             }
 
             &.guess-book {
-                background-color: #D4C0FF;
+                background-color: $main-bg;
 
                 .first-content {
-                    .btn-first {
-                        .main-btn {
-                            background: #CB82FC;
-                            border: 3px solid #CB82FC;
+                    .main-btn {
+                        background: #DBBD6D;
+                        border: 3px solid #DBBD6D;
+                        padding: 5px 18px;
 
-                            &:hover {
-                                background-color: transparent;
-                                box-shadow: 0 0 25px rgb(216 163 229 / 55%);
-                            }
+                        &:hover {
+                            background-color: transparent;
+                            box-shadow: 0 0 25px rgb(231 212 120 / 55%);
                         }
                     }
                 }
             }
 
             &.business-portfolio {
-                background-color: #C6FFC0;
+                background-color: $white-color;
 
                 .first-content {
                     .btn-first {
                         .main-btn {
-                            background: #64C857;
-                            border: 3px solid #64C857;
+                            background: $main-btn-bg;
+                            border: 3px solid $main-btn-bg;
 
                             &:hover {
                                 background-color: transparent;
-                                box-shadow: 0 0 25px rgb(140 249 138 / 55%);
+                                box-shadow: 0 0 25px #fec1958c;
                             }
                         }
                     }
@@ -2943,17 +2991,18 @@ a {
             }
 
             &.new-born {
-                background-color: #FFD8D8;
+                background-color: $main-bg;
 
                 .first-content {
                     .btn-first {
                         .main-btn {
-                            background: #FC8F82;
-                            border: 3px solid #FC8F82;
+                            background: #DBBD6D;
+                            border: 3px solid #DBBD6D;
+                            padding: 5px 18px;
 
                             &:hover {
                                 background-color: transparent;
-                                box-shadow: 0 0 25px rgb(223 145 152 / 55%);
+                                box-shadow: 0 0 25px rgb(231 212 120 / 55%);
                             }
                         }
                     }
@@ -3437,6 +3486,10 @@ a {
     background-color: $white-color;
 
     .main-content {
+        &.home-p {
+            padding-top: 120px;
+        }
+
         .header-h {
             text-align: center;
         }

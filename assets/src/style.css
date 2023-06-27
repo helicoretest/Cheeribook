@@ -271,16 +271,19 @@ body {
   fill: #FC8F82;
 }
 .fil0.pre-school {
-  fill: #829DFC;
+  fill: #DBBC6D;
 }
 .fil0.life-style {
-  fill: #D0B93F;
+  fill: #FC8F82;
 }
 .fil0.guess-book {
-  fill: #CB82FC;
+  fill: #DBBC6D;
 }
 .fil0.business {
-  fill: #64C857;
+  fill: #FC8F82;
+}
+.fil0.new-born {
+  fill: #DBBC6D;
 }
 
 .send-btn .contact-btn {
@@ -873,6 +876,18 @@ a:hover {
   }
 }
 
+.home-bg-img-sec {
+  background-color: #FFFFFF;
+}
+.home-bg-img-sec .img-box {
+  width: 100%;
+  height: 100%;
+}
+.home-bg-img-sec .img-box img {
+  width: 100%;
+  height: 100%;
+}
+
 .service-main {
   background-color: #FFFFFF;
   position: relative;
@@ -941,6 +956,11 @@ a:hover {
   line-height: 14px;
   color: #52684B;
   text-transform: uppercase;
+}
+@media (max-width: 526px) {
+  .service-main .main-content .content .box .box-label {
+    height: 52px;
+  }
 }
 .service-main .main-content .content .box .box-title {
   white-space: nowrap;
@@ -1092,7 +1112,7 @@ a:hover {
 @media (max-width: 526px) {
   .design-photobook .main-content-img .img-box {
     height: auto;
-    padding: 60px 0px;
+    padding: 40px 0px;
   }
 }
 .design-photobook .main-content-img .img-box .content {
@@ -1355,8 +1375,9 @@ a:hover {
 }
 .get-in-touch .main-content .card {
   padding: 70px;
-  background-color: #52684B;
+  background-color: #FFF8DA;
   border-radius: 30px;
+  border: 0px;
 }
 .get-in-touch .main-content .card .first-content {
   display: flex;
@@ -1367,7 +1388,7 @@ a:hover {
   font-weight: 800;
   line-height: 79px;
   letter-spacing: 0.08em;
-  color: #FFFFFF;
+  color: #52684B;
   margin-bottom: 30px;
   min-width: 226px;
   text-align: start;
@@ -1376,7 +1397,7 @@ a:hover {
   font-size: 20px;
   line-height: 20px;
   letter-spacing: 0.08em;
-  color: #FFFFFF;
+  color: #52684B;
   margin-bottom: 15px;
 }
 .get-in-touch .main-content .card .first-content .social-sec .social-icons .icon-ul {
@@ -1403,7 +1424,7 @@ a:hover {
 .get-in-touch .main-content .card .first-content .social-sec .social-icons .icon-ul li .f-link {
   position: relative;
   text-decoration: none;
-  color: #262626;
+  color: #52684B;
   background: #fff;
   display: inline-block;
   width: 40px;
@@ -1469,7 +1490,7 @@ a:hover {
   color: #FFFFFF;
 }
 .get-in-touch .main-content .card .second-content .img-box {
-  background-image: url("./images/contact-bg1.png");
+  background-image: url("./images/get-in-touch-bg-1.png");
   height: 410px;
   width: 320px;
 }
@@ -1527,7 +1548,7 @@ a:hover {
   box-shadow: 0 0 0 0.2rem transparent;
 }
 .get-in-touch .main-content .card .second-content .img-box-sec {
-  background-image: url("./images/contact-bg2.png");
+  background-image: url("./images/get-in-touch-bg-2.png");
   height: 87px;
   width: 87px;
   margin-right: auto;
@@ -1677,6 +1698,10 @@ a:hover {
   right: 85px;
   width: 86px;
   height: 86px;
+}
+.moments .main-content .content .main-btn {
+  min-width: 210px;
+  font-size: 18px;
 }
 .moments .main-content .content .secondary-btn {
   font-size: 20px;
@@ -1966,10 +1991,10 @@ a:hover {
 }
 
 .main-pixels .portrait {
-  background-color: #FFDADB;
+  background-color: #FFF8DA;
 }
 .main-pixels .portrait.product {
-  background-color: #FFF8DA;
+  background-color: #FFFFFF;
 }
 .main-pixels .portrait.product .main-content .first-content .img-box .imag {
   background-image: url(./images/retouching-before2.png);
@@ -1978,21 +2003,21 @@ a:hover {
   background-image: url(./images/retouching-after2.png);
 }
 .main-pixels .portrait.product .main-content .second-content .main-btn {
-  background: #D0B93F;
-  border: 3px solid #D0B93F;
+  background: #FC8F82;
+  border: 3px solid #FC8F82;
 }
 .main-pixels .portrait.product .main-content .second-content .main-btn .fil0 {
-  fill: #D0B93F;
+  fill: #FC8F82;
 }
 .main-pixels .portrait.product .main-content .second-content .main-btn:hover {
   background: transparent;
-  box-shadow: 0 0 25px rgba(253, 246, 164, 0.55);
+  box-shadow: 0 0 25px rgba(254, 193, 149, 0.5490196078);
 }
 .main-pixels .portrait.product .main-content .second-content .main-btn:hover .fil0 {
-  fill: #D0B93F;
+  fill: #FC8F82;
 }
 .main-pixels .portrait.lorem {
-  background-color: #DAEDFF;
+  background-color: #FFF8DA;
 }
 .main-pixels .portrait.lorem .main-content .first-content .img-box .imag {
   background-image: url(./images/retouching-before3.png);
@@ -2001,18 +2026,18 @@ a:hover {
   background-image: url(./images/retouching-after3.png);
 }
 .main-pixels .portrait.lorem .main-content .second-content .main-btn {
-  background: #6EA4D8;
-  border: 3px solid #6EA4D8;
+  background: #D0B93F;
+  border: 3px solid #D0B93F;
 }
 .main-pixels .portrait.lorem .main-content .second-content .main-btn .fil0 {
-  fill: #6EA4D8;
+  fill: #D0B93F;
 }
 .main-pixels .portrait.lorem .main-content .second-content .main-btn:hover {
   background: transparent;
-  box-shadow: 0 0 25px rgba(157, 216, 229, 0.55);
+  box-shadow: 0 0 25px rgba(253, 246, 164, 0.55);
 }
 .main-pixels .portrait.lorem .main-content .second-content .main-btn:hover .fil0 {
-  fill: #6EA4D8;
+  fill: #D0B93F;
 }
 .main-pixels .portrait .main-content {
   padding: 120px 0px 160px 0px;
@@ -2060,6 +2085,20 @@ a:hover {
 }
 .main-pixels .portrait .main-content .second-content {
   margin-top: 45px;
+}
+.main-pixels .portrait .main-content .second-content .main-btn {
+  background: #D0B93F;
+  border: 3px solid #D0B93F;
+}
+.main-pixels .portrait .main-content .second-content .main-btn .fil0 {
+  fill: #D0B93F;
+}
+.main-pixels .portrait .main-content .second-content .main-btn:hover {
+  background: transparent;
+  box-shadow: 0 0 25px rgba(253, 246, 164, 0.55);
+}
+.main-pixels .portrait .main-content .second-content .main-btn:hover .fil0 {
+  fill: #D0B93F;
 }
 .main-pixels .portrait .main-content .second-content .p-txt {
   margin-bottom: 50px;
@@ -2169,7 +2208,7 @@ a:hover {
 .photobook-type .main-content .pre-school {
   scroll-snap-align: start;
   scroll-snap-stop: always;
-  background-color: #C0E1FF;
+  background-color: #FFF8DA;
   padding: 60px 0px;
 }
 .photobook-type .main-content .pre-school .first-content .p-header {
@@ -2191,13 +2230,13 @@ a:hover {
   justify-content: center;
 }
 .photobook-type .main-content .pre-school .first-content .btn-first .main-btn {
-  background: #829DFC;
-  border: 3px solid #829DFC;
+  background: #DBBD6D;
+  border: 3px solid #DBBD6D;
   padding: 5px 18px;
 }
 .photobook-type .main-content .pre-school .first-content .btn-first .main-btn:hover {
   background-color: transparent;
-  box-shadow: 0 0 25px rgba(157, 225, 222, 0.55);
+  box-shadow: 0 0 25px rgba(231, 212, 120, 0.55);
 }
 .photobook-type .main-content .pre-school .first-content .img-container {
   display: flex;
@@ -2210,48 +2249,50 @@ a:hover {
   justify-content: center;
 }
 .photobook-type .main-content .pre-school.life-style {
-  background-color: #FFF5C0;
+  background-color: #FFFFFF;
 }
 .photobook-type .main-content .pre-school.life-style .first-content .btn-first .main-btn {
-  background: #D0B93F;
-  border: 3px solid #D0B93F;
-}
-.photobook-type .main-content .pre-school.life-style .first-content .btn-first .main-btn:hover {
-  background-color: transparent;
-  box-shadow: 0 0 25px rgba(243, 215, 109, 0.55);
-}
-.photobook-type .main-content .pre-school.guess-book {
-  background-color: #D4C0FF;
-}
-.photobook-type .main-content .pre-school.guess-book .first-content .btn-first .main-btn {
-  background: #CB82FC;
-  border: 3px solid #CB82FC;
-}
-.photobook-type .main-content .pre-school.guess-book .first-content .btn-first .main-btn:hover {
-  background-color: transparent;
-  box-shadow: 0 0 25px rgba(216, 163, 229, 0.55);
-}
-.photobook-type .main-content .pre-school.business-portfolio {
-  background-color: #C6FFC0;
-}
-.photobook-type .main-content .pre-school.business-portfolio .first-content .btn-first .main-btn {
-  background: #64C857;
-  border: 3px solid #64C857;
-}
-.photobook-type .main-content .pre-school.business-portfolio .first-content .btn-first .main-btn:hover {
-  background-color: transparent;
-  box-shadow: 0 0 25px rgba(140, 249, 138, 0.55);
-}
-.photobook-type .main-content .pre-school.new-born {
-  background-color: #FFD8D8;
-}
-.photobook-type .main-content .pre-school.new-born .first-content .btn-first .main-btn {
   background: #FC8F82;
   border: 3px solid #FC8F82;
 }
+.photobook-type .main-content .pre-school.life-style .first-content .btn-first .main-btn:hover {
+  background-color: transparent;
+  box-shadow: 0 0 25px rgba(254, 193, 149, 0.5490196078);
+}
+.photobook-type .main-content .pre-school.guess-book {
+  background-color: #FFF8DA;
+}
+.photobook-type .main-content .pre-school.guess-book .first-content .main-btn {
+  background: #DBBD6D;
+  border: 3px solid #DBBD6D;
+  padding: 5px 18px;
+}
+.photobook-type .main-content .pre-school.guess-book .first-content .main-btn:hover {
+  background-color: transparent;
+  box-shadow: 0 0 25px rgba(231, 212, 120, 0.55);
+}
+.photobook-type .main-content .pre-school.business-portfolio {
+  background-color: #FFFFFF;
+}
+.photobook-type .main-content .pre-school.business-portfolio .first-content .btn-first .main-btn {
+  background: #FC8F82;
+  border: 3px solid #FC8F82;
+}
+.photobook-type .main-content .pre-school.business-portfolio .first-content .btn-first .main-btn:hover {
+  background-color: transparent;
+  box-shadow: 0 0 25px rgba(254, 193, 149, 0.5490196078);
+}
+.photobook-type .main-content .pre-school.new-born {
+  background-color: #FFF8DA;
+}
+.photobook-type .main-content .pre-school.new-born .first-content .btn-first .main-btn {
+  background: #DBBD6D;
+  border: 3px solid #DBBD6D;
+  padding: 5px 18px;
+}
 .photobook-type .main-content .pre-school.new-born .first-content .btn-first .main-btn:hover {
   background-color: transparent;
-  box-shadow: 0 0 25px rgba(223, 145, 152, 0.55);
+  box-shadow: 0 0 25px rgba(231, 212, 120, 0.55);
 }
 
 .w {
@@ -2717,6 +2758,9 @@ a:hover {
 
 .gallary {
   background-color: #FFFFFF;
+}
+.gallary .main-content.home-p {
+  padding-top: 120px;
 }
 .gallary .main-content .header-h {
   text-align: center;
