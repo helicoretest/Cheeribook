@@ -1810,10 +1810,19 @@ a:hover {
   background-color: #FFFFFF;
 }
 .about-memories .main-content {
-  padding: 0px 0px 80px 0px;
+  padding: 0px 0px 0px 0px;
+}
+.about-memories .main-content .p-txt {
+  color: #515151;
+  font-size: 16px;
+}
+.about-memories .main-content .p-txt.btm {
+  text-align: justify;
+  width: 66%;
+  transform: translateY(-170px);
 }
 .about-memories .main-content .first-div .img-box {
-  width: 278px;
+  width: 320px;
   height: 420px;
 }
 .about-memories .main-content .first-div .img-box img {
@@ -1821,12 +1830,111 @@ a:hover {
   height: 100%;
   border-radius: 60px 60px 100px 0px;
 }
+.about-memories .main-content .second-div {
+  margin-top: 150px;
+}
 .about-memories .main-content .second-div .p-header {
   font-size: 24px;
   line-height: 37px;
-  text-align: center;
+  text-align: start;
   letter-spacing: 0.02em;
-  color: #1E1E1E;
+  color: #1C1717;
+  font-weight: 500;
+}
+.about-memories .main-content .second-div .inner-f-div {
+  margin-top: 24px;
+}
+.about-memories .main-content .second-div .inner-s-div {
+  margin-top: 60px;
+}
+.about-memories .main-content .second-div .inner-s-div .img-box {
+  width: 347px;
+  height: 354px;
+}
+.about-memories .main-content .second-div .inner-s-div .img-box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.everyone .main-content {
+  padding-bottom: 260px;
+}
+.everyone .main-content .img-box {
+  height: 617px;
+  width: 100%;
+  background-size: cover !important;
+  background-position: center center;
+  background: url("./images/everyone-bg.png"), lightgray 0px -10.619px/100% 155.592% no-repeat;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  position: relative;
+}
+.everyone .main-content .img-box .everyone-card {
+  padding: 28px;
+  border-radius: 20px;
+  border: 1px solid #DFDFDF;
+  background: #FFF;
+  width: 80%;
+  position: absolute;
+  bottom: -174px;
+}
+.everyone .main-content .img-box .everyone-card .main-header {
+  color: #FAA89E;
+  margin-bottom: 16px;
+}
+.everyone .main-content .img-box .everyone-card .p-txt {
+  font-size: 16px;
+  color: #484848;
+  line-height: 22px;
+}
+
+.how-we-work-sec .main-content {
+  padding: 60px 0px 80px 0px;
+}
+.how-we-work-sec .main-content .header-h {
+  margin-bottom: 60px;
+  text-align: center;
+}
+.how-we-work-sec .main-content .content {
+  padding-left: 80px;
+}
+.how-we-work-sec .main-content .content .box {
+  padding-left: 120px;
+  display: flex;
+  margin-bottom: 32px;
+}
+.how-we-work-sec .main-content .content .box .p-txt {
+  font-size: 16px;
+  line-height: 20px;
+  color: #484848;
+  margin-bottom: 0px;
+  margin-top: 6px;
+}
+.how-we-work-sec .main-content .content .box .num-txt {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: normal;
+  color: #FAA89E;
+  margin-right: 10px;
+  margin-bottom: 0px;
+}
+.how-we-work-sec .main-content .content .box.box-sec {
+  padding-left: 0px;
+}
+.how-we-work-sec .main-content .sec-content {
+  display: flex;
+  justify-content: end;
+}
+.how-we-work-sec .main-content .sec-content .img-box {
+  width: 559px;
+  height: 711px;
+}
+.how-we-work-sec .main-content .sec-content .img-box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px 0px 0px 20px;
 }
 
 .our-team {

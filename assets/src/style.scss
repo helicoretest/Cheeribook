@@ -2495,11 +2495,22 @@ a {
     background-color: $white-color;
 
     .main-content {
-        padding: 0px 0px 80px 0px;
+        padding: 0px 0px 0px 0px;
+
+        .p-txt {
+            color: $sec-txt-color;
+            font-size: 16px;
+
+            &.btm {
+                text-align: justify;
+                width: 66%;
+                transform: translateY(-170px);
+            }
+        }
 
         .first-div {
             .img-box {
-                width: 278px;
+                width: 320px;
                 height: 420px;
 
                 img {
@@ -2511,12 +2522,36 @@ a {
         }
 
         .second-div {
+            margin-top: 150px;
+
             .p-header {
                 font-size: 24px;
                 line-height: 37px;
-                text-align: center;
+                text-align: start;
                 letter-spacing: 0.02em;
-                color: #1E1E1E;
+                color: $main-txt-color;
+                font-weight: 500;
+
+            }
+
+            .inner-f-div {
+                margin-top: 24px;
+
+            }
+
+            .inner-s-div {
+                margin-top: 60px;
+
+                .img-box {
+                    width: 347px;
+                    height: 354px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 20px;
+                    }
+                }
             }
         }
 
@@ -2567,6 +2602,112 @@ a {
 }
 
 //memories sec end
+
+//everyone sec start
+.everyone {
+    .main-content {
+        padding-bottom: 260px;
+
+        .img-box {
+            height: 617px;
+            width: 100%;
+            background-size: cover !important;
+            background-position: center center;
+            background: url("./images/everyone-bg.png"), lightgray 0px -10.619px / 100% 155.592% no-repeat;
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            position: relative;
+
+            .everyone-card {
+                padding: 28px;
+                border-radius: 20px;
+                border: 1px solid #DFDFDF;
+                background: #FFF;
+                width: 80%;
+                position: absolute;
+                bottom: -174px;
+
+                .main-header {
+                    color: $card-bg;
+                    margin-bottom: 16px;
+                }
+
+                .p-txt {
+                    font-size: 16px;
+                    color: $sub-txt;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+}
+
+//everyone sec end
+
+//how-we-work sec start
+.how-we-work-sec {
+    .main-content {
+        padding: 60px 0px 80px 0px;
+
+        .header-h {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .content {
+            padding-left: 80px;
+
+            .box {
+                padding-left: 120px;
+                display: flex;
+                margin-bottom: 32px;
+
+                .p-txt {
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: $sub-txt;
+                    margin-bottom: 0px;
+                    margin-top: 6px;
+                }
+
+                .num-txt {
+                    font-size: 32px;
+                    font-weight: 500;
+                    line-height: normal;
+                    color: $card-bg;
+                    margin-right: 10px;
+                    margin-bottom: 0px;
+
+                }
+
+                &.box-sec {
+                    padding-left: 0px;
+
+                }
+            }
+        }
+
+        .sec-content {
+            display: flex;
+            justify-content: end;
+
+            .img-box {
+                width: 559px;
+                height: 711px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 20px 0px 0px 20px;
+                }
+            }
+        }
+    }
+}
+
+//how-we-work sec end
+
 
 //our team sec start
 .our-team {
