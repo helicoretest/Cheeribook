@@ -1442,7 +1442,7 @@ a {
                     line-height: 24px;
                     padding-top: 16px;
                     font-weight: 500;
-                    color: #52684B;
+                    color: $sub-txt;
 
                     @include mobile {
                         font-size: 20px;
