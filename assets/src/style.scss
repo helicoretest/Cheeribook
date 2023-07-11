@@ -2583,7 +2583,7 @@ a {
         animation: drop-in 1000ms ease 500ms backwards;
 
         @include mobile {
-            padding: 60px 20px 0px 20px;
+            padding: 60px 20px 60px 20px;
 
             .second-div {
                 order: 1;
@@ -2591,6 +2591,10 @@ a {
 
             .first-div {
                 order: 2;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
             }
         }
 
@@ -2607,12 +2611,22 @@ a {
         }
 
         .content {
+            @include mobile {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
             .heading {
                 position: relative;
 
                 .sec-header {
                     text-align: start;
                     margin-bottom: 40px;
+
+                    @include mobile {
+                        text-align: center;
+                    }
 
                     .unlimited-txt {
                         color: #F4B4B7;
@@ -2631,6 +2645,10 @@ a {
                     right: 85px;
                     width: 86px;
                     height: 86px;
+
+                    @include mobile {
+                        display: none;
+                    }
                 }
             }
 
@@ -2652,6 +2670,10 @@ a {
                 text-align: center;
                 letter-spacing: 0.02em;
                 color: $black-color;
+
+                @include mobile {
+                    width: auto;
+                }
             }
         }
 
@@ -2720,6 +2742,10 @@ a {
     .main-content {
         padding: 0px 0px 0px 0px;
 
+        @include mobile {
+            padding: 0px 20px;
+        }
+
         .p-txt {
             color: $sec-txt-color;
             font-size: 16px;
@@ -2728,13 +2754,31 @@ a {
                 text-align: justify;
                 width: 66%;
                 transform: translateY(-148px);
+
+                @include mobile {
+                    width: auto;
+                    transform: translateY(0px);
+                    margin-top: 40px;
+                }
             }
         }
 
         .first-div {
+            @include mobile {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-right: 15px !important;
+            }
+
             .img-box {
                 width: 320px;
                 height: 420px;
+
+                @include mobile {
+                    width: auto;
+                    height: auto;
+                }
 
                 img {
                     width: 100%;
@@ -2747,6 +2791,11 @@ a {
         .second-div {
             margin-top: 150px;
 
+            @include mobile {
+                margin-top: 40px;
+                padding-left: 15px !important;
+            }
+
             .p-header {
                 font-size: 24px;
                 line-height: 37px;
@@ -2754,6 +2803,10 @@ a {
                 letter-spacing: 0.02em;
                 color: $main-txt-color;
                 font-weight: 500;
+
+                @include mobile {
+                    text-align: center;
+                }
 
             }
 
@@ -2768,6 +2821,11 @@ a {
                 .img-box {
                     width: 347px;
                     height: 354px;
+
+                    @include mobile {
+                        width: auto;
+                        height: auto;
+                    }
 
                     img {
                         width: 100%;
@@ -2831,6 +2889,10 @@ a {
     .main-content {
         padding-bottom: 260px;
 
+        @include mobile{
+            padding: 60px 0px 0px 0px;
+        }
+
         .img-box {
             height: 617px;
             width: 100%;
@@ -2842,6 +2904,10 @@ a {
             justify-content: center;
             position: relative;
 
+            @include mobile {
+                height: 373px;
+            }
+
             .everyone-card {
                 padding: 28px;
                 border-radius: 20px;
@@ -2850,6 +2916,10 @@ a {
                 width: 80%;
                 position: absolute;
                 bottom: -174px;
+
+                @include mobile{
+                    display: none;
+                }
 
                 .main-header {
                     color: $card-bg;
@@ -2873,6 +2943,10 @@ a {
     .main-content {
         padding: 60px 0px 80px 0px;
 
+        @include mobile {
+            padding: 60px 20px;
+        }
+
         .header-h {
             margin-bottom: 60px;
             text-align: center;
@@ -2881,10 +2955,17 @@ a {
         .content {
             padding-left: 80px;
 
+            @include mobile{
+                padding-left: 0px;
+            }
+
             .box {
                 padding-left: 120px;
                 display: flex;
                 margin-bottom: 32px;
+                @include mobile{
+                    padding-left: 0px;
+                }
 
                 .p-txt {
                     font-size: 16px;
@@ -2919,10 +3000,19 @@ a {
                 width: 559px;
                 height: 711px;
 
+                @include mobile{
+                    width: auto;
+                    height: auto;
+                }
+
                 img {
                     width: 100%;
                     height: 100%;
                     border-radius: 20px 0px 0px 20px;
+
+                    @include mobile{
+                        border-radius: 20px;
+                    }
                 }
             }
         }
