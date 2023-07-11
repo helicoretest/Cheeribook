@@ -521,7 +521,7 @@ $breakpoints: (
     font-family: $wulkan-font-medium;
 }
 
-.num-txt{
+.num-txt {
     font-family: $rubik-font;
 }
 
@@ -1534,7 +1534,7 @@ a {
             color: $new-txt-color;
             margin-bottom: 32px;
 
-            @include mobile{
+            @include mobile {
                 text-align: center;
             }
         }
@@ -2662,8 +2662,10 @@ a {
                 transform: translateX(75px);
 
                 @include mobile {
-                    width: auto;
-                    height: auto;
+                    width: 232.968px;
+                    height: 241.374px;
+                    transform: translateX(0px);
+
                 }
 
                 &:hover {
@@ -2686,6 +2688,11 @@ a {
                 &.img-box-2 {
                     margin-left: auto;
                     transform: translateY(-110px);
+
+                    @include mobile {
+                        margin-left: 0px;
+                        transform: translate(80px, -74px);
+                    }
 
                     &:hover {
                         img {

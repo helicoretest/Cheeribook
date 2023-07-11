@@ -1995,8 +1995,9 @@ a:hover {
 }
 @media (max-width: 526px) {
   .moments .main-content .sec-content .img-box-1 {
-    width: auto;
-    height: auto;
+    width: 232.968px;
+    height: 241.374px;
+    transform: translateX(0px);
   }
 }
 .moments .main-content .sec-content .img-box-1:hover img {
@@ -2013,6 +2014,12 @@ a:hover {
 .moments .main-content .sec-content .img-box-1.img-box-2 {
   margin-left: auto;
   transform: translateY(-110px);
+}
+@media (max-width: 526px) {
+  .moments .main-content .sec-content .img-box-1.img-box-2 {
+    margin-left: 0px;
+    transform: translate(80px, -74px);
+  }
 }
 .moments .main-content .sec-content .img-box-1.img-box-2:hover img {
   transform: rotateY(25deg);
