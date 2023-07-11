@@ -463,7 +463,6 @@ $breakpoints: (
     color: $black-color;
 
     @include mobile {
-        font-size: 12px;
         line-height: 18px;
     }
 }
@@ -473,6 +472,11 @@ $breakpoints: (
     font-size: 28px;
     line-height: 28px;
     color: $main-txt-color;
+
+    @include mobile {
+        font-size: 12px;
+        line-height: 18px;
+    }
 }
 
 .header-h {
@@ -575,6 +579,11 @@ a {
                         font-weight: 500;
                         line-height: 28px;
                         color: #1E1E1E;
+
+                        @include mobile {
+                            font-size: 18px;
+                        }
+
                     }
                 }
             }
@@ -605,12 +614,29 @@ a {
     &.main-nav {
         background: $new-bg;
 
+        @include mobile {
+            background: #3b5999;
+        }
+
         &.other {
             background: $white-color;
         }
 
         .navbar-collapse {
+            @include mobile {
+                padding-top: 20px;
+
+                &.show {
+                    // height: 100vh;
+                }
+            }
+
             .navbar-nav {
+
+                @include mobile {
+                    align-items: center;
+                }
+
                 .nav-item {
                     .nav-link {
                         color: #000000;
@@ -642,6 +668,22 @@ a {
         .navbar-brand {
             .logo {
                 width: 100px;
+            }
+        }
+
+        .designing-btn {
+            display: block;
+
+            @include mobile {
+                display: none;
+            }
+        }
+
+        .designing-btn-mobile {
+            display: none;
+
+            @include mobile {
+                display: block;
             }
         }
     }
@@ -868,7 +910,6 @@ a {
 //home page start
 .main-home {
     background-color: $new-bg;
-    min-height: 100vh;
     height: auto;
 
     @include mobile {
@@ -975,9 +1016,19 @@ a {
             align-items: flex-start;
             animation: drop-in 1200ms ease 500ms backwards;
 
+            @include mobile {
+                order: 2;
+                align-items: center;
+                justify-content: center;
+            }
+
             .sec-header {
                 margin-bottom: 15px;
                 text-align: start;
+
+                @include mobile {
+                    text-align: center;
+                }
 
                 .unlimited-txt {
                     color: #F4B4B7;
@@ -997,6 +1048,8 @@ a {
                 @include mobile {
                     font-size: 14px;
                     margin-bottom: 30px;
+                    text-align: center;
+                    width: auto;
                 }
             }
 
@@ -1008,9 +1061,19 @@ a {
         .sec-content {
             animation: drop-in 1200ms ease 500ms backwards;
 
+            @include mobile {
+                order: 1;
+                margin-bottom: 40px;
+            }
+
             .img-box {
                 width: 540px;
                 height: 470px;
+
+                @include mobile {
+                    width: auto;
+                    height: auto;
+                }
 
                 img {
                     width: 100%;
@@ -1053,7 +1116,7 @@ a {
         padding: 90px 0px 0px 0px;
 
         @include mobile {
-            padding: 60px 20px;
+            padding: 60px 20px 0px 20px;
         }
 
         // @include mobile {
@@ -1064,10 +1127,19 @@ a {
 
         .first-div {
 
+            @include mobile {
+                margin-bottom: 25px;
+            }
+
             // position: relative;
             .img-box {
                 width: 463px;
                 height: 509px;
+
+                @include mobile {
+                    width: auto;
+                    height: auto;
+                }
 
                 img {
                     width: 100%;
@@ -1132,6 +1204,12 @@ a {
             }
 
             .about-content {
+                @include mobile {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
                 .header-h {
                     font-weight: 500;
                     line-height: normal;
@@ -1171,6 +1249,11 @@ a {
 
     .main-content {
         padding: 80px 0px;
+        position: relative;
+
+        @include mobile {
+            padding: 40px 0px;
+        }
 
         .content {
             background-color: $card-bg;
@@ -1181,11 +1264,22 @@ a {
             align-items: center;
             width: 100%;
 
+            @include mobile {
+                padding: 20px 10px;
+            }
+
             .p-header {
                 font-size: 24px;
                 letter-spacing: 0.96px;
                 text-transform: uppercase;
                 color: $white-color;
+
+                @include mobile {
+                    text-align: center;
+                    font-size: 12px;
+                    line-height: 18px;
+                    letter-spacing: 0.48px;
+                }
             }
         }
     }
@@ -1202,6 +1296,11 @@ a {
     .img-box {
         width: 100%;
         height: 832px;
+
+        @include mobile {
+            width: auto;
+            height: auto;
+        }
 
         img {
             width: 100%;
@@ -1387,6 +1486,10 @@ a {
         padding: 80px 0px;
         position: relative;
 
+        @include mobile {
+            padding: 60px 40px;
+        }
+
         .header-h {
             font-weight: 500;
             color: $new-txt-color;
@@ -1401,6 +1504,12 @@ a {
                 position: absolute;
                 right: 0;
                 top: -74px;
+
+                @include mobile {
+                    position: relative;
+                    top: 0;
+                    margin-top: 20px;
+                }
 
                 .owl-next {
                     margin-left: 40px;
@@ -1426,12 +1535,23 @@ a {
             }
 
             .content {
+                @include mobile {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
                 .img-box {
                     width: 357px;
                     height: 400px;
                     margin-bottom: 16px;
                     overflow: hidden;
                     border-radius: 10px;
+
+                    @include mobile {
+                        width: auto;
+                        height: auto;
+                    }
 
 
                     img {
@@ -1452,6 +1572,10 @@ a {
                 .p-txt {
                     color: #484848;
                     margin-bottom: 12px;
+
+                    @include mobile {
+                        font-size: 18px;
+                    }
                 }
             }
         }
@@ -1467,11 +1591,19 @@ a {
     .main-content {
         padding: 80px 0px;
 
+        @include mobile {
+            padding: 60px 0px;
+        }
+
         .header-h {
             font-weight: 500;
             text-align: center;
             color: $new-txt-color;
             margin-bottom: 60px;
+
+            @include mobile {
+                margin-bottom: 24px;
+            }
         }
 
         .owl-carousel {
@@ -1480,6 +1612,11 @@ a {
                     width: 254px;
                     height: 296px;
                     margin-bottom: 16px;
+
+                    @include mobile {
+                        width: auto;
+                        height: auto;
+                    }
 
                     img {
                         border-radius: 10px;
@@ -1977,6 +2114,10 @@ a {
                 flex-direction: column;
                 align-items: flex-start;
 
+                @include mobile {
+                    align-items: center;
+                }
+
                 .sec-header {
                     font-weight: 800;
                     line-height: 79px;
@@ -2000,6 +2141,10 @@ a {
                         letter-spacing: 0.08em;
                         color: $sec-txt-color;
                         margin-bottom: 15px;
+
+                        @include mobile {
+                            text-align: center;
+                        }
                     }
 
                     .social-icons {
@@ -2050,7 +2195,7 @@ a {
                                 .f-link {
                                     position: relative;
                                     text-decoration: none;
-                                    color: #52684B;
+                                    color: #515151;
                                     background: #fff;
                                     display: inline-block;
                                     width: 40px;
@@ -2128,6 +2273,14 @@ a {
                             }
                         }
                     }
+                }
+            }
+
+            .mobile-div {
+
+                @include mobile {
+                    margin-top: 20px;
+                    justify-content: center !important;
                 }
             }
 
@@ -2221,9 +2374,7 @@ a {
                     bottom: -10px;
 
                     @include mobile {
-                        right: auto;
-                        bottom: auto;
-                        margin-right: 0px;
+                        display: none;
                     }
                 }
             }
@@ -2383,6 +2534,18 @@ a {
         padding: 100px 0px 0px 0px;
         animation: drop-in 1000ms ease 500ms backwards;
 
+        @include mobile {
+            padding: 60px 20px 0px 20px;
+
+            .second-div {
+                order: 1;
+            }
+
+            .first-div {
+                order: 2;
+            }
+        }
+
         @keyframes drop-in {
             from {
                 opacity: 0;
@@ -2449,6 +2612,11 @@ a {
                 width: 278px;
                 height: 278px;
                 transform: translateX(75px);
+
+                @include mobile {
+                    width: auto;
+                    height: auto;
+                }
 
                 &:hover {
                     img {
@@ -4132,10 +4300,18 @@ a {
     .main-content {
         padding: 60px 0px 40px 0px;
 
+        @include mobile {
+            padding: 60px 20px;
+        }
+
         .content {
             .header-h {
                 color: $main-btn-bg;
                 margin-top: 20px;
+
+                @include mobile {
+                    text-align: center;
+                }
             }
         }
 
