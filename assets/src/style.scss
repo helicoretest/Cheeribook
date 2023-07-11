@@ -5,15 +5,45 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Rubik&family=Work+Sans&display=swap');
 
+//Rubik-font
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Rubik&display=swap');
+
 //font-awesome icon
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
+
+//wulkan display medium font
+@font-face {
+    font-family: 'Wulkan Display Medium';
+    src: url('./Font/WulkanDisplayMedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+//wulkan display semiblod font
+@font-face {
+    font-family: 'Wulkan Display SemiBold';
+    src: url('./Font/WulkanDisplaySemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+// wulkan display regular font
+@font-face {
+    font-family: 'Wulkan Display Regular';
+    src: url('./Font/WulkanDisplayRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Newsreader', serif !important;
+    font-family: 'Wulkan Display Regular' !important;
 }
 
 $main-bg : #FFF8DA;
@@ -27,6 +57,10 @@ $sec-txt-color : #515151;
 $new-txt-color : #1C1717;
 $sub-txt : #484848;
 $gradint-bg : linear-gradient(180deg, #FFFCDA 0%, rgba(205, 209, 251, 0.67) 100%);
+$wulkan-font-medium : 'Wulkan Display Medium';
+$wulkan-font-semiBold : 'Wulkan Display SemiBold';
+$wulkan-font-regular : 'Wulkan Display Regular';
+$rubik-font : 'Rubik';
 
 // media querirs start
 
@@ -435,19 +469,20 @@ $breakpoints: (
 
 
 .main-header {
-    font-weight: 500;
     font-size: 32px;
     line-height: 32px;
     color: $main-txt-color;
+    font-family: $wulkan-font-medium;
 }
 
 .sec-header {
-    font-weight: 500;
     font-size: 64px;
     line-height: 83px;
     text-align: center;
     letter-spacing: 0.06em;
     color: $main-txt-color;
+    font-family: $wulkan-font-medium;
+
 
     @include mobile {
         font-size: 48px;
@@ -456,7 +491,6 @@ $breakpoints: (
 }
 
 .p-txt {
-    font-weight: 400;
     font-size: 18px;
     line-height: 28px;
     letter-spacing: 0.02em;
@@ -468,10 +502,10 @@ $breakpoints: (
 }
 
 .p-header {
-    font-weight: 500;
     font-size: 28px;
     line-height: 28px;
     color: $main-txt-color;
+    font-family: $wulkan-font-medium;
 
     @include mobile {
         font-size: 12px;
@@ -481,10 +515,10 @@ $breakpoints: (
 
 .header-h {
     font-style: normal;
-    font-weight: 500;
     font-size: 48px;
     line-height: 48px;
     color: $main-txt-color;
+    font-family: $wulkan-font-medium;
 }
 
 input {
@@ -614,9 +648,9 @@ a {
     &.main-nav {
         background: $new-bg;
 
-        @include mobile {
-            background: #3b5999;
-        }
+        // @include mobile {
+        //     background: #3b5999;
+        // }
 
         &.other {
             background: $white-color;
@@ -645,6 +679,7 @@ a {
                         line-height: 16px;
                         transition: .5s ease;
                         text-transform: uppercase;
+                        font-family: $wulkan-font-medium;
                     }
                 }
 
@@ -1273,6 +1308,7 @@ a {
                 letter-spacing: 0.96px;
                 text-transform: uppercase;
                 color: $white-color;
+                margin-top: 5px;
 
                 @include mobile {
                     text-align: center;
@@ -1383,7 +1419,7 @@ a {
                     padding-left: 30px;
                     padding-bottom: 15px;
                     font-weight: 400;
-                    font-size: 14px;
+                    font-size: 16px;
                     line-height: 14px;
                     color: #52684B;
                     text-transform: uppercase;
@@ -1572,6 +1608,10 @@ a {
                 .p-txt {
                     color: #484848;
                     margin-bottom: 12px;
+
+                    .num-txt {
+                        font-family: $rubik-font;
+                    }
 
                     @include mobile {
                         font-size: 18px;
@@ -2014,6 +2054,7 @@ a {
                 letter-spacing: 0.06em;
                 margin-bottom: 20px;
                 text-align: start;
+                font-family: $wulkan-font-semiBold;
 
                 @include mobile {
                     line-height: 52px;
@@ -3424,11 +3465,11 @@ a {
     scroll-snap-type: y mandatory;
 
     .heading {
-        font-weight: 600;
         font-size: 48px;
         line-height: 48px;
         text-align: center;
         margin-bottom: 60px;
+        font-family: $wulkan-font-semiBold;
     }
 
     .main-content {
@@ -4283,6 +4324,7 @@ a {
                             line-height: 20px;
                             text-transform: capitalize;
                             color: #1E1E1E;
+                            font-family: $rubik-font;
                         }
                     }
                 }
@@ -4302,6 +4344,19 @@ a {
 
         @include mobile {
             padding: 60px 20px;
+        }
+
+        &.faq {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px 0px 80px 0px;
+
+
+            .content {
+                width: 70%;
+                margin-top: 40px;
+            }
         }
 
         .content {

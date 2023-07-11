@@ -1,16 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&family=Poppins&family=Rubik&family=Work+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Rubik&display=swap");
 @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
 * {
   margin: 0;
   padding: 0;
 }
 
+@font-face {
+  font-family: "Wulkan Display Medium";
+  src: url("./Font/WulkanDisplayMedium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Wulkan Display SemiBold";
+  src: url("./Font/WulkanDisplaySemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Wulkan Display Regular";
+  src: url("./Font/WulkanDisplayRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Newsreader", serif !important;
+  font-family: "Wulkan Display Regular" !important;
 }
 
 .main-btn {
@@ -334,19 +356,19 @@ body {
 }
 
 .main-header {
-  font-weight: 500;
   font-size: 32px;
   line-height: 32px;
   color: #1C1717;
+  font-family: "Wulkan Display Medium";
 }
 
 .sec-header {
-  font-weight: 500;
   font-size: 64px;
   line-height: 83px;
   text-align: center;
   letter-spacing: 0.06em;
   color: #1C1717;
+  font-family: "Wulkan Display Medium";
 }
 @media (max-width: 526px) {
   .sec-header {
@@ -356,7 +378,6 @@ body {
 }
 
 .p-txt {
-  font-weight: 400;
   font-size: 18px;
   line-height: 28px;
   letter-spacing: 0.02em;
@@ -369,10 +390,10 @@ body {
 }
 
 .p-header {
-  font-weight: 500;
   font-size: 28px;
   line-height: 28px;
   color: #1C1717;
+  font-family: "Wulkan Display Medium";
 }
 @media (max-width: 526px) {
   .p-header {
@@ -383,10 +404,10 @@ body {
 
 .header-h {
   font-style: normal;
-  font-weight: 500;
   font-size: 48px;
   line-height: 48px;
   color: #1C1717;
+  font-family: "Wulkan Display Medium";
 }
 
 input::-webkit-input-placeholder {
@@ -487,11 +508,6 @@ a:hover {
 .navbar.main-nav {
   background: #F8F8F8;
 }
-@media (max-width: 526px) {
-  .navbar.main-nav {
-    background: #3b5999;
-  }
-}
 .navbar.main-nav.other {
   background: #FFFFFF;
 }
@@ -512,6 +528,7 @@ a:hover {
   line-height: 16px;
   transition: 0.5s ease;
   text-transform: uppercase;
+  font-family: "Wulkan Display Medium";
 }
 .navbar.main-nav .navbar-collapse .navbar-nav:hover .nav-item .nav-link {
   color: #8f8f8f;
@@ -913,6 +930,7 @@ a:hover {
   letter-spacing: 0.96px;
   text-transform: uppercase;
   color: #FFFFFF;
+  margin-top: 5px;
 }
 @media (max-width: 526px) {
   .masterpiece .main-content .content .p-header {
@@ -1005,7 +1023,7 @@ a:hover {
   padding-left: 30px;
   padding-bottom: 15px;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 14px;
   color: #52684B;
   text-transform: uppercase;
@@ -1168,6 +1186,9 @@ a:hover {
 .popular .main-content .owl-carousel .content .p-txt {
   color: #484848;
   margin-bottom: 12px;
+}
+.popular .main-content .owl-carousel .content .p-txt .num-txt {
+  font-family: "Rubik";
 }
 @media (max-width: 526px) {
   .popular .main-content .owl-carousel .content .p-txt {
@@ -1503,6 +1524,7 @@ a:hover {
   letter-spacing: 0.06em;
   margin-bottom: 20px;
   text-align: start;
+  font-family: "Wulkan Display SemiBold";
 }
 @media (max-width: 526px) {
   .client-story .main-content .right-child .sec-header {
@@ -2529,11 +2551,11 @@ a:hover {
   scroll-snap-type: y mandatory;
 }
 .photobook-type .heading {
-  font-weight: 600;
   font-size: 48px;
   line-height: 48px;
   text-align: center;
   margin-bottom: 60px;
+  font-family: "Wulkan Display SemiBold";
 }
 .photobook-type .main-content .pre-school {
   scroll-snap-align: start;
@@ -3277,6 +3299,7 @@ a:hover {
   line-height: 20px;
   text-transform: capitalize;
   color: #1E1E1E;
+  font-family: "Rubik";
 }
 
 .faq {
@@ -3289,6 +3312,16 @@ a:hover {
   .faq .main-content {
     padding: 60px 20px;
   }
+}
+.faq .main-content.faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 0px 80px 0px;
+}
+.faq .main-content.faq .content {
+  width: 70%;
+  margin-top: 40px;
 }
 .faq .main-content .content .header-h {
   color: #FC8F82;
