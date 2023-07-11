@@ -410,6 +410,10 @@ body {
   font-family: "Wulkan Display Medium";
 }
 
+.num-txt {
+  font-family: "Rubik";
+}
+
 input::-webkit-input-placeholder {
   color: #2D2D2D !important;
 }
@@ -471,7 +475,6 @@ a:hover {
   color: #FC8F82;
   padding: 0px !important;
   margin: 20px 0px 8px 0px;
-  text-transform: capitalize;
 }
 .accordion .card .card-header .accordion-btn.btn-link:hover {
   text-decoration: none;
@@ -1121,6 +1124,11 @@ a:hover {
   font-weight: 500;
   color: #1C1717;
   margin-bottom: 32px;
+}
+@media (max-width: 526px) {
+  .popular .main-content .header-h {
+    text-align: center;
+  }
 }
 .popular .main-content .owl-carousel {
   display: block !important;
@@ -2121,8 +2129,8 @@ a:hover {
   margin-top: 6px;
 }
 .how-we-work-sec .main-content .content .box .num-txt {
-  font-size: 32px;
-  font-weight: 500;
+  font-size: 30px;
+  font-weight: 400;
   line-height: normal;
   color: #FAA89E;
   margin-right: 10px;

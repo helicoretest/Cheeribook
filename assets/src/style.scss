@@ -521,6 +521,10 @@ $breakpoints: (
     font-family: $wulkan-font-medium;
 }
 
+.num-txt{
+    font-family: $rubik-font;
+}
+
 input {
     &::-webkit-input-placeholder {
         color: #2D2D2D !important;
@@ -597,7 +601,6 @@ a {
                     color: $main-btn-bg;
                     padding: 0px !important;
                     margin: 20px 0px 8px 0px;
-                    text-transform: capitalize;
 
                     &:hover {
                         text-decoration: none;
@@ -1530,6 +1533,10 @@ a {
             font-weight: 500;
             color: $new-txt-color;
             margin-bottom: 32px;
+
+            @include mobile{
+                text-align: center;
+            }
         }
 
         .owl-carousel {
@@ -2881,8 +2888,8 @@ a {
                 }
 
                 .num-txt {
-                    font-size: 32px;
-                    font-weight: 500;
+                    font-size: 30px;
+                    font-weight: 400;
                     line-height: normal;
                     color: $card-bg;
                     margin-right: 10px;
