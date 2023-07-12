@@ -2117,11 +2117,11 @@ a {
                         color: $sec-txt-color;
 
                         &.name {
-                            font-weight: 600;
                             font-size: 18px;
                             line-height: 18px;
                             color: $black-color;
                             margin-top: 20px;
+                            font-family: $wulkan-font-semiBold;
                         }
                     }
                 }
@@ -2463,7 +2463,7 @@ a {
             }
 
             .contact-form {
-                margin-bottom: 58px;
+                margin-bottom: 48px;
 
                 .form-group {
                     position: relative;
@@ -2790,7 +2790,7 @@ a {
             }
 
             .img-box {
-                width: 320px;
+                width: 330px;
                 height: 420px;
 
                 @include mobile {
@@ -2807,7 +2807,7 @@ a {
         }
 
         .second-div {
-            margin-top: 150px;
+            margin-top: 120px;
 
             @include mobile {
                 margin-top: 40px;
@@ -4640,7 +4640,7 @@ a {
     background-color: $white-color;
 
     .main-content {
-        padding: 60px 0px 40px 0px;
+        padding: 60px 0px 60px 0px;
 
         @include mobile {
             padding: 60px 20px;

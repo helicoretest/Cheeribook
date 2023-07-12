@@ -1577,11 +1577,11 @@ a:hover {
   color: #515151;
 }
 .client-story .main-content .second-content .content .box .p-txt.name {
-  font-weight: 600;
   font-size: 18px;
   line-height: 18px;
   color: #1E1E1E;
   margin-top: 20px;
+  font-family: "Wulkan Display SemiBold";
 }
 
 .get-in-touch {
@@ -1846,7 +1846,7 @@ a:hover {
   margin-bottom: 46px;
 }
 .contact-us .main-content .content .contact-form {
-  margin-bottom: 58px;
+  margin-bottom: 48px;
 }
 .contact-us .main-content .content .contact-form .form-group {
   position: relative;
@@ -2112,7 +2112,7 @@ a:hover {
   }
 }
 .about-memories .main-content .first-div .img-box {
-  width: 320px;
+  width: 330px;
   height: 420px;
 }
 @media (max-width: 526px) {
@@ -2127,7 +2127,7 @@ a:hover {
   border-radius: 60px 60px 100px 0px;
 }
 .about-memories .main-content .second-div {
-  margin-top: 150px;
+  margin-top: 120px;
 }
 @media (max-width: 526px) {
   .about-memories .main-content .second-div {
@@ -3660,7 +3660,7 @@ a:hover {
   background-color: #FFFFFF;
 }
 .faq .main-content {
-  padding: 60px 0px 40px 0px;
+  padding: 60px 0px 60px 0px;
 }
 @media (max-width: 526px) {
   .faq .main-content {
