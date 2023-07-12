@@ -2593,9 +2593,10 @@ a {
 //about page start
 .moments {
 
-    @include mobile{
+    @include mobile {
         padding-top: 100px;
     }
+
     .main-content {
         padding: 100px 0px 0px 0px;
         animation: drop-in 1000ms ease 500ms backwards;
@@ -2972,6 +2973,10 @@ a {
 
         .content {
             padding-left: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
 
             @include mobile {
                 padding-left: 0px;
@@ -3227,7 +3232,8 @@ a {
 //retouching sec start
 .perfection {
     background-color: $white-color;
-    @include mobile{
+
+    @include mobile {
         padding-top: 100px;
     }
 

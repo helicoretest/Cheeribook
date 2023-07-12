@@ -2232,6 +2232,10 @@ a:hover {
 }
 .how-we-work-sec .main-content .content {
   padding-left: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 @media (max-width: 526px) {
   .how-we-work-sec .main-content .content {
