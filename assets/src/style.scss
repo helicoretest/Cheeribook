@@ -2184,7 +2184,7 @@ a {
                     font-weight: 800;
                     line-height: 79px;
                     letter-spacing: 0.08em;
-                    color: $sec-txt-color;
+                    color: $white-color;
                     margin-bottom: 30px;
                     min-width: 226px;
                     text-align: start;
@@ -2201,7 +2201,7 @@ a {
                         font-size: 20px;
                         line-height: 20px;
                         letter-spacing: 0.08em;
-                        color: $sec-txt-color;
+                        color: $white-color;
                         margin-bottom: 15px;
 
                         @include mobile {

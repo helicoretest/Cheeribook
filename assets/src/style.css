@@ -1629,7 +1629,7 @@ a:hover {
   font-weight: 800;
   line-height: 79px;
   letter-spacing: 0.08em;
-  color: #515151;
+  color: #FFFFFF;
   margin-bottom: 30px;
   min-width: 226px;
   text-align: start;
@@ -1645,7 +1645,7 @@ a:hover {
   font-size: 20px;
   line-height: 20px;
   letter-spacing: 0.08em;
-  color: #515151;
+  color: #FFFFFF;
   margin-bottom: 15px;
 }
 @media (max-width: 526px) {
