@@ -1606,7 +1606,7 @@ a:hover {
 }
 .get-in-touch .main-content .card {
   padding: 70px;
-  background-color: #FFDADB;
+  background-color: #FC8F82;
   border-radius: 30px;
   border: 0px;
 }
@@ -1837,13 +1837,28 @@ a:hover {
 .contact-us {
   background: #FFFFFF;
 }
+@media (max-width: 526px) {
+  .contact-us {
+    padding-top: 100px;
+  }
+}
 .contact-us .main-content {
   padding: 100px 0px;
+}
+@media (max-width: 526px) {
+  .contact-us .main-content {
+    padding: 60px 20px;
+  }
 }
 .contact-us .main-content .content .sec-header {
   text-align: start;
   line-height: 64px;
   margin-bottom: 46px;
+}
+@media (max-width: 526px) {
+  .contact-us .main-content .content .sec-header {
+    text-align: center;
+  }
 }
 .contact-us .main-content .content .contact-form {
   margin-bottom: 48px;
@@ -1857,6 +1872,13 @@ a:hover {
 }
 .contact-us .main-content .content .contact-form .form-group input {
   padding-left: 0px;
+}
+@media (max-width: 526px) {
+  .contact-us .main-content .content .contact-form .send-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
 }
 .contact-us .main-content .content .contact-form .form-control-placeholder {
   position: absolute;
@@ -1881,6 +1903,11 @@ a:hover {
   color: #2D2D2D;
   background-color: transparent;
   padding-left: 0px;
+}
+@media (max-width: 526px) {
+  .contact-us .main-content .content .contact-form .form-control {
+    font-size: 18px;
+  }
 }
 .contact-us .main-content .content .contact-form .form-control:focus {
   border: 0;

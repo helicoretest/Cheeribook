@@ -2163,7 +2163,7 @@ a {
 
         .card {
             padding: 70px;
-            background-color: #FFDADB;
+            background-color: $main-btn-bg;
             border-radius: 30px;
             border: 0px;
 
@@ -2452,14 +2452,26 @@ a {
 .contact-us {
     background: $white-color;
 
+    @include mobile{
+        padding-top: 100px;
+    }
+
     .main-content {
         padding: 100px 0px;
+
+        @include mobile{
+            padding: 60px 20px;
+        }
 
         .content {
             .sec-header {
                 text-align: start;
                 line-height: 64px;
                 margin-bottom: 46px;
+
+                @include mobile{
+                    text-align: center;
+                }
             }
 
             .contact-form {
@@ -2475,6 +2487,14 @@ a {
 
                     input {
                         padding-left: 0px;
+                    }
+                }
+
+                .send-btn{
+                    @include mobile{
+                        display: flex;
+                        justify-content: center;
+                        margin-top: 40px;
                     }
                 }
 
@@ -2503,6 +2523,10 @@ a {
                     color: #2D2D2D;
                     background-color: transparent;
                     padding-left: 0px;
+
+                    @include mobile{
+                        font-size: 18px;
+                    }
 
                     &:focus {
                         border: 0;
