@@ -651,6 +651,14 @@ a {
     &.main-nav {
         background: $new-bg;
 
+        @include mobile {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 1030;
+        }
+
         // @include mobile {
         //     background: #3b5999;
         // }
@@ -953,6 +961,7 @@ a {
     @include mobile {
         min-height: auto;
         padding-bottom: 0px;
+        padding-top: 100px;
     }
 
     // .container {
@@ -1334,7 +1343,8 @@ a {
 
     .img-box {
         width: 100%;
-        height: 832px;
+        height: 690px;
+        padding-top: 80px;
 
         @include mobile {
             width: auto;
@@ -1355,7 +1365,7 @@ a {
     position: relative;
 
     .main-content {
-        padding: 80px 0px;
+        padding: 0px 0px 80px 0px;
 
         @include mobile {
             padding: 60px 20px;
@@ -2147,6 +2157,10 @@ a {
     .main-content {
         padding: 120px 0px 50px 0px;
 
+        @include mobile {
+            padding: 60px 20px 50px 20px;
+        }
+
         .card {
             padding: 70px;
             background-color: #FFDADB;
@@ -2578,6 +2592,10 @@ a {
 
 //about page start
 .moments {
+
+    @include mobile{
+        padding-top: 100px;
+    }
     .main-content {
         padding: 100px 0px 0px 0px;
         animation: drop-in 1000ms ease 500ms backwards;
@@ -2889,7 +2907,7 @@ a {
     .main-content {
         padding-bottom: 260px;
 
-        @include mobile{
+        @include mobile {
             padding: 60px 0px 0px 0px;
         }
 
@@ -2917,7 +2935,7 @@ a {
                 position: absolute;
                 bottom: -174px;
 
-                @include mobile{
+                @include mobile {
                     display: none;
                 }
 
@@ -2955,7 +2973,7 @@ a {
         .content {
             padding-left: 80px;
 
-            @include mobile{
+            @include mobile {
                 padding-left: 0px;
             }
 
@@ -2963,7 +2981,8 @@ a {
                 padding-left: 120px;
                 display: flex;
                 margin-bottom: 32px;
-                @include mobile{
+
+                @include mobile {
                     padding-left: 0px;
                 }
 
@@ -3000,7 +3019,7 @@ a {
                 width: 559px;
                 height: 711px;
 
-                @include mobile{
+                @include mobile {
                     width: auto;
                     height: auto;
                 }
@@ -3010,7 +3029,7 @@ a {
                     height: 100%;
                     border-radius: 20px 0px 0px 20px;
 
-                    @include mobile{
+                    @include mobile {
                         border-radius: 20px;
                     }
                 }
@@ -3208,10 +3227,17 @@ a {
 //retouching sec start
 .perfection {
     background-color: $white-color;
+    @include mobile{
+        padding-top: 100px;
+    }
 
     .main-content {
         padding: 80px 30px 20px 30px;
         animation: drop-in 1000ms ease 500ms backwards;
+
+        @include mobile {
+            padding: 60px 20px;
+        }
 
         @keyframes drop-in {
             from {
@@ -3232,10 +3258,39 @@ a {
                 display: flex;
                 justify-content: space-between;
 
+                @include mobile {
+                    justify-content: end;
+                }
+
+                &.mobile {
+                    @include mobile {
+                        justify-content: start;
+
+                    }
+
+                    .first-img {
+                        display: none;
+
+                        @include mobile {
+                            display: block;
+                            margin-bottom: 40px;
+                        }
+                    }
+
+                    .second-img {
+                        display: none;
+                    }
+                }
+
                 .first-img {
                     width: 183px;
                     height: 141px;
                     transform: translateY(-102px);
+
+                    @include mobile {
+                        display: none;
+                        transform: translateY(0px);
+                    }
 
                     img {
                         width: 100%;
@@ -3248,6 +3303,11 @@ a {
                     width: 274px;
                     height: 211px;
                     transform: translateY(-80px);
+
+                    @include mobile {
+                        transform: translateY(0px);
+                        margin-top: 40px;
+                    }
 
                     img {
                         width: 100%;
@@ -3270,6 +3330,10 @@ a {
                     letter-spacing: 0;
                     margin-bottom: 0px;
                     margin-bottom: 40px;
+
+                    @include mobile {
+                        width: auto;
+                    }
 
                     .unlimited-txt {
                         color: #F4B4B7;
@@ -3371,8 +3435,24 @@ a {
         .main-content {
             padding: 120px 0px 160px 0px;
 
+            @include mobile {
+                padding: 60px 0px;
+            }
+
+            .header-h {
+                @include mobile {
+                    text-align: center;
+                    margin-bottom: 40px;
+                }
+            }
+
             .p-txt {
                 margin-bottom: 20px;
+
+                @include mobile {
+                    text-align: center;
+                    margin-bottom: 40px;
+                }
             }
 
             .first-content {
@@ -3385,6 +3465,10 @@ a {
                     position: relative;
                     transition: 0.5s ease-out;
 
+                    @include mobile {
+                        width: auto;
+                        height: auto;
+                    }
 
                     .imag {
                         background-image: url(./images/retouching-before1.png);
@@ -3393,6 +3477,13 @@ a {
                         border-radius: 20px;
                         filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
 
+                        @include mobile {
+                            width: 325px;
+                            height: 325px;
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            background-position: center center;
+                        }
                     }
 
                     img {
@@ -3404,6 +3495,10 @@ a {
 
                     &:hover {
                         transform: translate(41px, 50px);
+
+                        @include mobile {
+                            transform: translate(21px, 30px);
+                        }
 
                         .imag {
                             background-image: url(./images/retouching-after1.png);
@@ -3419,11 +3514,24 @@ a {
                     top: 50px;
                     right: 24px;
                     border-radius: 20px;
+
+                    @include mobile {
+                        width: 325px;
+                        height: 325px;
+                        top: 30px;
+                        right: 0;
+                    }
                 }
             }
 
             .second-content {
                 margin-top: 45px;
+
+                @include mobile {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
 
                 .main-btn {
                     background: #D0B93F;
@@ -3445,6 +3553,10 @@ a {
 
                 .p-txt {
                     margin-bottom: 50px;
+
+                    @include mobile {
+                        margin-top: 70px;
+                    }
                 }
             }
         }
@@ -3458,9 +3570,18 @@ a {
     .main-content {
         padding: 120px 0px 0px 0px;
 
+        @include mobile {
+            padding: 60px 20px 0px 20px;
+        }
+
         .img-box {
             width: 100%;
             height: 503px;
+
+            @include mobile {
+                width: auto;
+                height: auto;
+            }
 
             img {
                 width: 100%;
@@ -3481,6 +3602,10 @@ a {
         padding: 80px 0px;
         animation: drop-in 1000ms ease 500ms backwards;
 
+        @include mobile {
+            padding: 60px 20px 60px 20px;
+        }
+
         @keyframes drop-in {
             from {
                 opacity: 0;
@@ -3497,6 +3622,11 @@ a {
             width: 349px;
             height: 552px;
 
+            @include mobile {
+                width: auto;
+                height: auto;
+            }
+
             img {
                 width: 100%;
                 height: 100%;
@@ -3507,12 +3637,28 @@ a {
         .second-content {
             margin-left: 40px;
 
+            @include mobile {
+                margin-left: 0px;
+                margin-top: 40px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
             .header {
                 position: relative;
                 margin-bottom: 40px;
 
+                @include mobile {
+                    margin-bottom: 20px;
+                }
+
                 .sec-header {
                     text-align: start;
+
+                    @include mobile {
+                        text-align: center;
+                    }
                 }
 
                 .img-box {
@@ -3521,6 +3667,10 @@ a {
                     position: absolute;
                     right: 155px;
                     top: 16px;
+
+                    @include mobile {
+                        display: none;
+                    }
 
                     img {
                         width: 100%;
@@ -3542,6 +3692,11 @@ a {
                     width: 254px;
                     height: 373px;
 
+                    @include mobile {
+                        width: auto;
+                        height: auto;
+                    }
+
                     img {
                         width: 100%;
                         height: 100%;
@@ -3552,6 +3707,12 @@ a {
                 .img-box-third {
                     width: 337px;
                     height: 229px;
+
+                    @include mobile {
+                        width: auto;
+                        height: auto;
+                        margin-left: 20px;
+                    }
 
                     img {
                         width: 100%;
@@ -3574,6 +3735,10 @@ a {
         text-align: center;
         margin-bottom: 60px;
         font-family: $wulkan-font-semiBold;
+
+        @include mobile {
+            margin-bottom: 40px;
+        }
     }
 
     .main-content {
@@ -3582,6 +3747,10 @@ a {
             scroll-snap-stop: always;
             background-color: $new-bg;
             padding: 60px 0px;
+
+            @include mobile {
+                padding: 60px 20px;
+            }
 
             .first-content {
                 .p-header {
@@ -3603,6 +3772,10 @@ a {
                     display: flex;
                     align-items: center;
                     justify-content: center;
+
+                    @include mobile {
+                        margin-bottom: 30px;
+                    }
 
                     .main-btn {
                         background: #DBBD6D;
@@ -4356,14 +4529,26 @@ a {
     .main-content {
         padding: 120px 0px;
 
+        @include mobile {
+            padding: 60px 0px;
+        }
+
         .header-h {
             text-align: center;
             margin-bottom: 60px;
+
+            @include mobile {
+                margin-bottom: 40px;
+            }
         }
 
         .owl-carousel {
             .owl-nav {
                 display: block;
+
+                @include mobile {
+                    display: none;
+                }
 
                 .owl-next {
                     position: absolute;
@@ -4396,6 +4581,13 @@ a {
 
             &.selling-caro {
                 .content {
+                    @include mobile {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: start;
+                        justify-content: center;
+                    }
+
                     .box {
                         display: flex;
                         align-items: center;
@@ -4415,6 +4607,10 @@ a {
 
                     .inner-content {
                         margin-left: 24px;
+
+                        @include mobile {
+                            margin-left: 0px;
+                        }
 
                         .p-txt {
                             color: $sec-txt-color;
