@@ -648,6 +648,10 @@ a {
     // padding: 0rem 1rem 0rem 1rem !important;
     padding: 1rem 1rem !important;
 
+    @include mobile {
+        padding: 1rem 0rem !important;
+    }
+
     &.main-nav {
         background: $new-bg;
 
@@ -667,22 +671,35 @@ a {
             background: $white-color;
         }
 
+        .navbar-brand {
+            @include mobile {
+                padding-left: 1rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .navbar-toggler {
+            @include mobile {
+                padding-right: 1rem;
+                margin-bottom: 1rem;
+
+            }
+        }
+
         .navbar-collapse {
             @include mobile {
-                padding-top: 20px;
 
-                &.show {
-                    // height: 100vh;
-                }
+                min-height: 100vh;
+                height: auto;
+                border-top: 1px solid #FC8F82;
             }
 
             .navbar-nav {
-
-                @include mobile {
-                    align-items: center;
-                }
-
                 .nav-item {
+                    @include mobile {
+                        border-bottom: 1px solid #FFDADB;
+                    }
+
                     .nav-link {
                         color: #000000;
                         font-weight: 500;
@@ -691,6 +708,12 @@ a {
                         transition: .5s ease;
                         text-transform: uppercase;
                         font-family: $wulkan-font-medium;
+
+                        @include mobile {
+                            text-align: center;
+                            font-size: 18px;
+                            padding: 16px 0px;
+                        }
                     }
                 }
 
@@ -725,11 +748,35 @@ a {
             }
         }
 
-        .designing-btn-mobile {
-            display: none;
-
+        .bottom-btn {
             @include mobile {
-                display: block;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-top: 40px;
+            }
+
+            .designing-btn-mobile {
+                display: none;
+
+                @include mobile {
+                    display: block;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+            .p-txt{
+                display: none;
+
+                @include mobile{
+                    display: block;
+                    font-size: 14px;
+                    line-height: 20px;
+                    text-align: center;
+                    margin-top: 30px;
+                    color: $main-btn-bg;
+                }
             }
         }
     }
@@ -2452,15 +2499,36 @@ a {
 .contact-us {
     background: $white-color;
 
-    @include mobile{
+    @include mobile {
         padding-top: 100px;
     }
 
     .main-content {
         padding: 100px 0px;
 
-        @include mobile{
+        @include mobile {
             padding: 60px 20px;
+        }
+
+        .p-txt {
+            font-size: 14px;
+            line-height: 22px;
+            color: $sec-txt-color;
+
+            @include mobile {
+                &.first {
+                    display: none;
+                }
+            }
+
+            &.second {
+                display: none;
+
+                @include mobile {
+                    display: block;
+                    margin-top: 120px;
+                }
+            }
         }
 
         .content {
@@ -2469,7 +2537,7 @@ a {
                 line-height: 64px;
                 margin-bottom: 46px;
 
-                @include mobile{
+                @include mobile {
                     text-align: center;
                 }
             }
@@ -2490,8 +2558,8 @@ a {
                     }
                 }
 
-                .send-btn{
-                    @include mobile{
+                .send-btn {
+                    @include mobile {
                         display: flex;
                         justify-content: center;
                         margin-top: 40px;
@@ -2524,7 +2592,7 @@ a {
                     background-color: transparent;
                     padding-left: 0px;
 
-                    @include mobile{
+                    @include mobile {
                         font-size: 18px;
                     }
 
@@ -2541,11 +2609,7 @@ a {
                 }
             }
 
-            .p-txt {
-                font-size: 14px;
-                line-height: 22px;
-                color: $sec-txt-color;
-            }
+
         }
 
         .second-content {
@@ -2586,6 +2650,13 @@ a {
                     align-items: end;
                     justify-content: center;
 
+
+                    @include mobile {
+                        width: auto;
+                        height: 508px;
+                        background-position: center center;
+                    }
+
                     &.second {
                         background: linear-gradient(180.58deg, rgba(0, 0, 0, 0) 52.12%, rgba(0, 0, 0, 0.4) 74.22%), url("./images/service1.png");
                         background-size: cover;
@@ -2607,6 +2678,11 @@ a {
                 position: absolute;
                 bottom: -100px;
                 left: 60px;
+
+                @include mobile {
+                    bottom: 175px;
+                    left: 0px;
+                }
             }
         }
     }
@@ -3627,6 +3703,10 @@ a {
 //photobook sec start
 .glimpse {
     background-color: $white-color;
+
+    @include mobile{
+        padding-top: 100px;
+    }
 
     .main-content {
         padding: 80px 0px;
@@ -4668,6 +4748,10 @@ a {
 //Faq page start
 .faq {
     background-color: $white-color;
+
+    @include mobile{
+        padding-top: 100px;
+    }
 
     .main-content {
         padding: 60px 0px 60px 0px;

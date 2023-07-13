@@ -508,6 +508,11 @@ a:hover {
 .navbar {
   padding: 1rem 1rem !important;
 }
+@media (max-width: 526px) {
+  .navbar {
+    padding: 1rem 0rem !important;
+  }
+}
 .navbar.main-nav {
   background: #F8F8F8;
 }
@@ -524,13 +529,27 @@ a:hover {
   background: #FFFFFF;
 }
 @media (max-width: 526px) {
-  .navbar.main-nav .navbar-collapse {
-    padding-top: 20px;
+  .navbar.main-nav .navbar-brand {
+    padding-left: 1rem;
+    margin-bottom: 1rem;
   }
 }
 @media (max-width: 526px) {
-  .navbar.main-nav .navbar-collapse .navbar-nav {
-    align-items: center;
+  .navbar.main-nav .navbar-toggler {
+    padding-right: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 526px) {
+  .navbar.main-nav .navbar-collapse {
+    min-height: 100vh;
+    height: auto;
+    border-top: 1px solid #FC8F82;
+  }
+}
+@media (max-width: 526px) {
+  .navbar.main-nav .navbar-collapse .navbar-nav .nav-item {
+    border-bottom: 1px solid #FFDADB;
   }
 }
 .navbar.main-nav .navbar-collapse .navbar-nav .nav-item .nav-link {
@@ -541,6 +560,13 @@ a:hover {
   transition: 0.5s ease;
   text-transform: uppercase;
   font-family: "Wulkan Display Medium";
+}
+@media (max-width: 526px) {
+  .navbar.main-nav .navbar-collapse .navbar-nav .nav-item .nav-link {
+    text-align: center;
+    font-size: 18px;
+    padding: 16px 0px;
+  }
 }
 .navbar.main-nav .navbar-collapse .navbar-nav:hover .nav-item .nav-link {
   color: #8f8f8f;
@@ -562,12 +588,36 @@ a:hover {
     display: none;
   }
 }
-.navbar.main-nav .designing-btn-mobile {
+@media (max-width: 526px) {
+  .navbar.main-nav .bottom-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+  }
+}
+.navbar.main-nav .bottom-btn .designing-btn-mobile {
   display: none;
 }
 @media (max-width: 526px) {
-  .navbar.main-nav .designing-btn-mobile {
+  .navbar.main-nav .bottom-btn .designing-btn-mobile {
     display: block;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.navbar.main-nav .bottom-btn .p-txt {
+  display: none;
+}
+@media (max-width: 526px) {
+  .navbar.main-nav .bottom-btn .p-txt {
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    margin-top: 30px;
+    color: #FC8F82;
   }
 }
 
@@ -1850,6 +1900,25 @@ a:hover {
     padding: 60px 20px;
   }
 }
+.contact-us .main-content .p-txt {
+  font-size: 14px;
+  line-height: 22px;
+  color: #515151;
+}
+@media (max-width: 526px) {
+  .contact-us .main-content .p-txt.first {
+    display: none;
+  }
+}
+.contact-us .main-content .p-txt.second {
+  display: none;
+}
+@media (max-width: 526px) {
+  .contact-us .main-content .p-txt.second {
+    display: block;
+    margin-top: 120px;
+  }
+}
 .contact-us .main-content .content .sec-header {
   text-align: start;
   line-height: 64px;
@@ -1918,11 +1987,6 @@ a:hover {
   border-bottom: 2px solid #B7B7B7;
   box-shadow: 0 0 0 0.2rem transparent;
 }
-.contact-us .main-content .content .p-txt {
-  font-size: 14px;
-  line-height: 22px;
-  color: #515151;
-}
 .contact-us .main-content .second-content {
   position: relative;
 }
@@ -1954,6 +2018,13 @@ a:hover {
   align-items: end;
   justify-content: center;
 }
+@media (max-width: 526px) {
+  .contact-us .main-content .second-content .owl-carousel .img-box {
+    width: auto;
+    height: 508px;
+    background-position: center center;
+  }
+}
 .contact-us .main-content .second-content .owl-carousel .img-box.second {
   background: linear-gradient(180.58deg, rgba(0, 0, 0, 0) 52.12%, rgba(0, 0, 0, 0.4) 74.22%), url("./images/service1.png");
   background-size: cover;
@@ -1970,6 +2041,12 @@ a:hover {
   position: absolute;
   bottom: -100px;
   left: 60px;
+}
+@media (max-width: 526px) {
+  .contact-us .main-content .second-content .bootom-image {
+    bottom: 175px;
+    left: 0px;
+  }
 }
 
 @media (max-width: 526px) {
@@ -2768,6 +2845,11 @@ a:hover {
 
 .glimpse {
   background-color: #FFFFFF;
+}
+@media (max-width: 526px) {
+  .glimpse {
+    padding-top: 100px;
+  }
 }
 .glimpse .main-content {
   padding: 80px 0px;
@@ -3689,6 +3771,11 @@ a:hover {
 
 .faq {
   background-color: #FFFFFF;
+}
+@media (max-width: 526px) {
+  .faq {
+    padding-top: 100px;
+  }
 }
 .faq .main-content {
   padding: 60px 0px 60px 0px;
