@@ -1043,12 +1043,17 @@ a:hover {
 }
 @media (max-width: 526px) {
   .service-main .main-content {
-    padding: 60px 20px;
+    padding: 20px 20px;
   }
 }
 .service-main .main-content .sec-header {
   font-weight: 500;
   margin-bottom: 60px;
+}
+@media (max-width: 526px) {
+  .service-main .main-content .sec-header {
+    margin-bottom: 40px;
+  }
 }
 .service-main .main-content .content .box {
   background: #FFF8DA;
