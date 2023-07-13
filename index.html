@@ -50,7 +50,7 @@
 
   <body>
     <!-- header start -->
-    <nav class="navbar navbar-expand-lg main-nav ">
+    <nav class="navbar navbar-expand-lg main-nav">
       <div class="container">
         <a class="navbar-brand" href="./index.html">
           <image
@@ -252,7 +252,10 @@
                   </div>
                 </button>
               </div>
-              <h6 class="p-txt">"Preserving moments, cherishing memories, and turning them into timeless treasures."</h6>
+              <h6 class="p-txt">
+                "Preserving moments, cherishing memories, and turning them into
+                timeless treasures."
+              </h6>
             </li>
           </ul>
         </div>
@@ -1055,7 +1058,6 @@
       </div>
     </div>
     <!-- masterpiece sec end -->
-
 
     <!-- our service sec start -->
     <div class="service-main">
@@ -2454,6 +2456,82 @@
             </div>
           </div>
         </div>
+
+        <div class="gallary-carousal">
+          <div class="owl-carousel owl-theme gallary-caro">
+            <div class="img-box">
+              <img
+                src="./assets/src/images/gallary1.png"
+                class="img-fluid"
+                alt="popular"
+              />
+            </div>
+
+            <div class="img-box">
+              <img
+                src="./assets/src/images/gallary9.jpeg"
+                class="img-fluid"
+                alt="popular"
+              />
+            </div>
+
+            <div class="img-box">
+              <img
+                src="./assets/src/images/gallary2.jpg"
+                class="img-fluid"
+                alt="popular"
+              />
+            </div>
+
+            <div class="img-box">
+              <img
+                src="./assets/src/images/gallary3.jpg"
+                class="img-fluid"
+                alt="popular"
+              />
+            </div>
+
+            <div class="img-box">
+              <img
+              src="./assets/src/images/gallary4.jpg"
+                class="img-fluid"
+                alt="popular"
+              />
+            </div>
+
+            <div class="img-box">
+              <img
+                src="./assets/src/images/gallary5.jpg"
+                class="img-fluid"
+                alt="popular"
+              />
+            </div>
+
+            <div class="img-box">
+              <img
+                src="./assets/src/images/retouching2.jpg"
+                class="img-fluid"
+                alt="popular"
+              />
+            </div>
+
+            <div class="img-box">
+              <img
+                src="./assets/src/images/gallary10.jpeg"
+                class="img-fluid"
+                alt="popular"
+              />
+            </div>
+
+            <div class="img-box">
+              <img
+                src="./assets/src/images/gallary6.jpg"
+                class="img-fluid"
+                alt="popular"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- gallary sec end -->
@@ -2767,6 +2845,24 @@
           1000: {
             items: 4.2,
           },
+        },
+      });
+    </script>
+
+    <script>
+      $(".gallary-caro").owlCarousel({
+        loop: true,
+        responsiveClass: true,
+        dots: false,
+        nav: false,
+        autoplay: true,
+        autoplayHoverPause: true,
+        autoplaySpeed: 3000,
+        responsive: {
+          0: {
+            items: 1.5,
+            margin: 20,
+          }
         },
       });
     </script>

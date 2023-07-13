@@ -649,7 +649,7 @@ a {
     padding: 1rem 1rem !important;
 
     @include mobile {
-        padding: 1rem 0rem !important;
+        padding: 0.2rem 0rem !important;
     }
 
     &.main-nav {
@@ -661,6 +661,7 @@ a {
             right: 0;
             left: 0;
             z-index: 1030;
+            border-bottom: 1px solid rgba(225, 225, 225, 0.5);
         }
 
         // @include mobile {
@@ -727,6 +728,10 @@ a {
                                 box-shadow: 0 2px 0 0 currentcolor;
                                 position: relative;
                                 top: -0.25rem;
+
+                                @include mobile {
+                                    top: 0px;
+                                }
                             }
                         }
                     }
@@ -766,10 +771,11 @@ a {
                     justify-content: center;
                 }
             }
-            .p-txt{
+
+            .p-txt {
                 display: none;
 
-                @include mobile{
+                @include mobile {
                     display: block;
                     font-size: 14px;
                     line-height: 20px;
@@ -1338,6 +1344,10 @@ a {
     &.about {
         .main-content {
             padding: 0px 0px 80px 0px;
+
+            @include mobile {
+                padding: 0px 0px 60px 0px;
+            }
         }
     }
 
@@ -2082,7 +2092,7 @@ a {
         padding: 120px 0px;
 
         @include mobile {
-            padding: 60px 20px;
+            padding: 60px 20px 20px 20px;
         }
 
         .one {
@@ -3006,10 +3016,53 @@ a {
 //everyone sec start
 .everyone {
     .main-content {
-        padding-bottom: 260px;
+        padding-bottom: 220px;
 
         @include mobile {
             padding: 60px 0px 0px 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .everyone-card {
+            padding: 28px;
+            border-radius: 20px;
+            border: 1px solid #DFDFDF;
+            background: #FFF;
+            width: 80%;
+            position: absolute;
+            bottom: -174px;
+
+            @include mobile {
+                display: none;
+                bottom: 0px;
+            }
+
+            &.mobile-div {
+                display: none;
+
+                @include mobile {
+                    display: block;
+                    position: relative;
+                    transform: translateY(-50px);
+                }
+            }
+
+            .main-header {
+                color: $card-bg;
+                margin-bottom: 16px;
+
+                @include mobile{
+                    text-align: center;
+                }
+            }
+
+            .p-txt {
+                font-size: 16px;
+                color: $sub-txt;
+                line-height: 22px;
+            }
         }
 
         .img-box {
@@ -3026,31 +3079,6 @@ a {
             @include mobile {
                 height: 373px;
             }
-
-            .everyone-card {
-                padding: 28px;
-                border-radius: 20px;
-                border: 1px solid #DFDFDF;
-                background: #FFF;
-                width: 80%;
-                position: absolute;
-                bottom: -174px;
-
-                @include mobile {
-                    display: none;
-                }
-
-                .main-header {
-                    color: $card-bg;
-                    margin-bottom: 16px;
-                }
-
-                .p-txt {
-                    font-size: 16px;
-                    color: $sub-txt;
-                    line-height: 22px;
-                }
-            }
         }
     }
 }
@@ -3063,7 +3091,7 @@ a {
         padding: 60px 0px 80px 0px;
 
         @include mobile {
-            padding: 60px 20px;
+            padding: 20px 20px 60px 20px;
         }
 
         .header-h {
@@ -3626,6 +3654,7 @@ a {
                         height: 325px;
                         top: 30px;
                         right: 0;
+                        display: none;
                     }
                 }
             }
@@ -3704,7 +3733,7 @@ a {
 .glimpse {
     background-color: $white-color;
 
-    @include mobile{
+    @include mobile {
         padding-top: 100px;
     }
 
@@ -4462,9 +4491,18 @@ a {
     background-color: $white-color;
 
     .main-content {
+
+        @include mobile {
+            padding-bottom: 60px;
+        }
+
         .header-h {
             text-align: center;
             margin-bottom: 60px;
+
+            @include mobile {
+                margin-bottom: 40px;
+            }
         }
 
         ::-webkit-scrollbar {
@@ -4480,6 +4518,10 @@ a {
         .external {
             overflow: hidden;
             height: 100vh;
+
+            @include mobile {
+                display: none;
+            }
 
             .horizontal-scroll-wrapper {
                 display: flex;
@@ -4627,6 +4669,31 @@ a {
 
         }
 
+        .gallary-carousal {
+            display: none;
+
+            @include mobile {
+                display: block;
+            }
+
+            .gallary-caro {
+                padding-left: 20px;
+
+                .img-box {
+                    width: 243px;
+                    height: 221px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        transition: 0s;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -4749,9 +4816,12 @@ a {
 .faq {
     background-color: $white-color;
 
-    @include mobile{
-        padding-top: 100px;
+    &.page-faq {
+        @include mobile {
+            padding-top: 100px;
+        }
     }
+
 
     .main-content {
         padding: 60px 0px 60px 0px;
