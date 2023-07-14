@@ -1026,7 +1026,8 @@ a:hover {
 @media (max-width: 526px) {
   .home-bg-img-sec .img-box {
     width: auto;
-    height: auto;
+    height: 350px;
+    padding-top: 60px;
   }
 }
 .home-bg-img-sec .img-box img {
@@ -2764,8 +2765,11 @@ a:hover {
 }
 @media (max-width: 526px) {
   .main-pixels .portrait .main-content .first-content .img-box {
-    width: auto;
-    height: auto;
+    width: 325px;
+    height: 325px;
+    border: 1px solid #8d8d8d;
+    border-radius: 20px;
+    transform: translate(30px, 20px);
   }
 }
 .main-pixels .portrait .main-content .first-content .img-box .imag {
@@ -2782,6 +2786,8 @@ a:hover {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    transform: translate(-30px, -30px);
+    transition: 0.5s ease-out;
   }
 }
 .main-pixels .portrait .main-content .first-content .img-box img {
@@ -2795,11 +2801,16 @@ a:hover {
 }
 @media (max-width: 526px) {
   .main-pixels .portrait .main-content .first-content .img-box:hover {
-    transform: translate(21px, 30px);
+    transform: translate(30px, 20px);
   }
 }
 .main-pixels .portrait .main-content .first-content .img-box:hover .imag {
   background-image: url(./images/retouching-after1.png);
+}
+@media (max-width: 526px) {
+  .main-pixels .portrait .main-content .first-content .img-box:hover .imag {
+    transform: translate(-1px, 1px);
+  }
 }
 .main-pixels .portrait .main-content .first-content .box {
   border: 1px solid #8d8d8d;
@@ -2812,10 +2823,6 @@ a:hover {
 }
 @media (max-width: 526px) {
   .main-pixels .portrait .main-content .first-content .box {
-    width: 325px;
-    height: 325px;
-    top: 30px;
-    right: 0;
     display: none;
   }
 }
